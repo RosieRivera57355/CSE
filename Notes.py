@@ -69,3 +69,50 @@ say_hi("John")
 print("John is 15. Next Year:")
 birthday(15)
 
+
+def f(x):
+    return x ** 5 + 4 * x ** 4 - 17 * x ** 2 + 4
+
+
+print(f(3))
+print(f(3) + f(5))
+
+# If statements
+
+
+def grade_calc(percentage):
+    if percentage >= 90:
+        return "A"
+    elif percentage >= 80: # Else if statement
+        return "B"
+    elif percentage >= 70:
+        return "C"
+    elif percentage >= 60:
+        return "D"
+    elif percentage <= 60:
+        return "F"
+
+# Loops
+
+# print(range(5))
+
+# for num in range(5):
+#     print(num + 1)
+
+# for letter in "Hello World" :
+#     print(letter)
+#
+# a = 1
+# while a < 10:
+#     print(a)
+#     a +=1
+# 
+# response = ""
+# while response != "Hello":
+#     response = input("Say\"Hello\"")
+
+print("Hello \nWorld")
+
+import random # imports should be at the top of your program
+print(random.randint(0,6))
+
