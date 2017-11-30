@@ -1,4 +1,5 @@
-#
+import random  # imports should be at the top of your program
+
 # print("Hello World!")
 #
 # # RosaMariaRivera
@@ -30,7 +31,7 @@
 # car_mpg = 9000.1
 #
 # # Inline Printing
-#
+# #
 # print("My car is the %s." % car_name)
 #
 # print("My car is the %s. It is a %s"  % (car_name, car_type))
@@ -47,10 +48,13 @@
 #
 # print("You are %s?" % age)
 
+
 def print_hw():
     print("Hello World")
 
+
 print_hw()
+
 
 def say_hi(name):  # name is a "parameter"
     print("Hello %s." % name)
@@ -61,8 +65,8 @@ say_hi("Johnny")
 
 
 def birthday(age):
-  age += 1 # age = age + 1
-  print(age)
+    age += 1  # age = age + 1
+    print(age)
 
 
 say_hi("John")
@@ -83,7 +87,7 @@ print(f(3) + f(5))
 def grade_calc(percentage):
     if percentage >= 90:
         return "A"
-    elif percentage >= 80: # Else if statement
+    elif percentage >= 80:  # Else if statement
         return "B"
     elif percentage >= 70:
         return "C"
@@ -94,25 +98,25 @@ def grade_calc(percentage):
 
 # Loops
 
-# print(range(5))
 
-# for num in range(5):
-#     print(num + 1)
+print(range(5))
 
-# for letter in "Hello World" :
-#     print(letter)
-#
-# a = 1
-# while a < 10:
-#     print(a)
-#     a +=1
-# 
-# response = ""
-# while response != "Hello":
-#     response = input("Say\"Hello\"")
+for num in range(5):
+    print(num + 1)
+
+for letter in "Hello World":
+    print(letter)
+
+a = 1
+while a < 10:
+    print(a)
+    a += 1
+
+response = ""
+while response != "Hello":
+    response = input("Say\"Hello\"")
 
 print("Hello \nWorld")
 
-import random # imports should be at the top of your program
-print(random.randint(0,6))
 
+print(random.randint(0, 6))
