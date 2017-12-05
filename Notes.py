@@ -131,18 +131,24 @@ print(random.randint(0, 6))
 #     last_name = input("What is your last name?")
 #     print("%s %s" % (last_name, first_name))
 
-"""Warmup #2
-Write a function called "happy_bday"
-that "sings" (prints)
-the Happy Birthday Song
+# Comparisons
 
-It must take one parameter called "name" """
+print(1 == 1) # Two equal signs to compare
 
+print(1 != 2) # One is not equal to 2
 
-def happy_bday(name):
-    print("Happy Birthday to you")
-    print("Happy Birthday to you")
-    print("Happy Birthday to " + name)
-    print("Happy Birthday to you!!!")
+print(not False) # This prints True
 
+print(1 == 1 and 5 <= 4)
 
+print(1 < 0 or 5 > 1)
+
+#Recasting
+
+c = '1'
+
+print(c == 1) # False - C is a string, 1 is an integer
+
+print(int(c) == 1)  # Compares two ints
+
+print(c == str(1))  # Compares two strings
