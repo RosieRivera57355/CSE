@@ -135,7 +135,8 @@ print(random.randint(0, 6))
 
 print(1 == 1) # Two equal signs to compare
 
-print(1 != 2) # One is not equal to 2
+print(1 != 2)
+736\5# One is not equal to 2
 
 print(not False) # This prints True
 
