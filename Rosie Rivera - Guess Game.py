@@ -2,17 +2,27 @@ import random
 
 
 number = random.randint(1, 50)
-print(number)
 
-while turns_left > 0 and number is False:
-    answer = int(input("The number I'm thinking of is 1-50. GUESS IT!"))
-    if answer == number
-        return "GOOD JOB!"
-    if answer >
 
-print(number == str(random.randint(1, 50)))
+right_guess = False
+turns_left = 5
 
-turns_left: 5
+
+while turns_left and right_guess is False:
+    answer = int(input("The number I'm thinking of is 1-50. GUESS IT! "))
+    if answer == number:
+        print("GOOD JOB!")
+        right_guess = True
+    elif answer >=  number:
+        print("lower")
+        turns_left -= 1
+    elif answer <= number:
+        print("higher")
+        turns_left -= 1
+    if turns_left is 0:
+        print("OOOOOOOOHHHHHHH You were close but not really the answer was %s..." % number)
+
+
 
 # Generate a number
 # Get a number (input) from the user

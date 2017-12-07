@@ -133,22 +133,22 @@ print(random.randint(0, 6))
 
 # Comparisons
 
-print(1 == 1) # Two equal signs to compare
+print(1 == 1)  # Two equal signs to compare
 
 print(1 != 2)
-736\5# One is not equal to 2
+# One is not equal to 2
 
-print(not False) # This prints True
+print(not False)  # This prints True
 
 print(1 == 1 and 5 <= 4)
 
 print(1 < 0 or 5 > 1)
 
-#Recasting
+# Recasting
 
 c = '1'
 
-print(c == 1) # False - C is a string, 1 is an integer
+print(c == 1)  # False - C is a string, 1 is an integer
 
 print(int(c) == 1)  # Compares two ints
 
