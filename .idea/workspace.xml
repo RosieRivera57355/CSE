@@ -14,8 +14,8 @@
       <file leaf-file-name="Rosie Rivera - Guess Game.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rosie Rivera - Guess Game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -24,8 +24,8 @@
       <file leaf-file-name="Lucky 7s.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lucky 7s.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            <state relative-caret-position="170">
+              <caret line="10" column="57" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -34,8 +34,8 @@
       <file leaf-file-name="Notes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Notes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="60" selection-end-column="45" />
+            <state relative-caret-position="357">
+              <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -67,8 +67,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/GuessGame.py" />
-        <option value="$PROJECT_DIR$/Notes.py" />
         <option value="$PROJECT_DIR$/Warm-Up.py" />
+        <option value="$PROJECT_DIR$/Notes.py" />
         <option value="$PROJECT_DIR$/Rosie Rivera - Guess Game.py" />
         <option value="$PROJECT_DIR$/Lucky 7s.py" />
       </list>
@@ -81,7 +81,7 @@
     <option name="height" value="688" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -94,24 +94,11 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CSE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CSE" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -125,7 +112,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Rosie Rivera - Guess Game">
+  <component name="RunManager" selected="Python.Lucky 7s">
+    <configuration name="Lucky 7s" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CSE" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lucky 7s.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="Notes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -177,16 +181,18 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.Notes" />
       <item index="1" class="java.lang.String" itemvalue="Python.Rosie Rivera - Guess Game" />
       <item index="2" class="java.lang.String" itemvalue="Python.Warm-Up" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Lucky 7s" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.Rosie Rivera - Guess Game" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Warm-Up" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Notes" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.Lucky 7s" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Rosie Rivera - Guess Game" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Warm-Up" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Notes" />
       </list>
     </recent_temporary>
   </component>
@@ -252,11 +258,43 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Rosie Rivera - Guess Game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Notes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="60" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Warm-Up.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lucky 7s.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Rosie Rivera - Guess Game.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -536,26 +574,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rosie Rivera - Guess Game.py">
+    <entry file="file://$PROJECT_DIR$/Notes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Notes.py">
+    <entry file="file://$PROJECT_DIR$/Rosie Rivera - Guess Game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="60" selection-end-column="45" />
+        <state relative-caret-position="255">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lucky 7s.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state relative-caret-position="170">
+          <caret line="10" column="57" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
           <folding />
         </state>
       </provider>
