@@ -14,18 +14,18 @@
       <file leaf-file-name="Rosie Rivera - Guess Game.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rosie Rivera - Guess Game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
+            <state relative-caret-position="272">
               <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Black Jack.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Black Jack.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Black Jack.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -34,18 +34,18 @@
       <file leaf-file-name="Lucky 7s.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lucky 7s.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
+            <state relative-caret-position="187">
               <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Notes.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Notes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Notes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+            <state relative-caret-position="540">
+              <caret line="187" column="0" lean-forward="true" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -54,7 +54,7 @@
       <file leaf-file-name="Warm-Up.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Warm-Up.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="799">
               <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
@@ -78,16 +78,16 @@
       <list>
         <option value="$PROJECT_DIR$/GuessGame.py" />
         <option value="$PROJECT_DIR$/Warm-Up.py" />
-        <option value="$PROJECT_DIR$/Notes.py" />
         <option value="$PROJECT_DIR$/Rosie Rivera - Guess Game.py" />
         <option value="$PROJECT_DIR$/Lucky 7s.py" />
         <option value="$PROJECT_DIR$/Black Jack.py" />
+        <option value="$PROJECT_DIR$/Notes.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-5" />
-    <option name="width" value="1143" />
+    <option name="width" value="1373" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectView">
@@ -136,7 +136,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Black Jack">
+  <component name="RunManager" selected="Python.Notes">
     <configuration name="Black Jack" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -231,11 +231,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Black Jack" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Lucky 7s" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Rosie Rivera - Guess Game" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Warm-Up" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Notes" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Notes" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Black Jack" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Lucky 7s" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Rosie Rivera - Guess Game" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Warm-Up" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +253,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="0" width="1143" height="735" extended-state="0" />
+    <frame x="-5" y="0" width="1373" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.296362" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -675,7 +675,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Warm-Up.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="799">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
@@ -683,23 +683,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Rosie Rivera - Guess Game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
+        <state relative-caret-position="272">
           <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Notes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lucky 7s.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
+        <state relative-caret-position="187">
           <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding />
         </state>
@@ -708,7 +700,15 @@
     <entry file="file://$PROJECT_DIR$/Black Jack.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Notes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="187" column="0" lean-forward="true" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
           <folding />
         </state>
       </provider>
