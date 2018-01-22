@@ -1,3 +1,4 @@
+import random
 """"
 
 Outline of Hangman
@@ -8,4 +9,8 @@ Outline of Hangman
 5. Create the win condition
 
 """
-word_bank = ["Click", "Robot", "School", "Batman", "Stitch", "Jack Black", "Shrek", "Sugar Daddy", "50 Cent", "Beyonce"]
+word_bank = ["Click", "Robot", "School", "Batman", "Stitch", "Jack Black", "Shrek", "Luis", "50 Cent", "Beyonce"]
+word = random.choice(word_bank)
+print(word)
+print(word_bank.punctuation)
+print(punctuation)
