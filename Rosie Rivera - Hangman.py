@@ -11,7 +11,9 @@ Outline of Hangman
 """
 list_form = []
 guesses_left = 10
-letters_guessed = [""]
-word_bank = ["Click", "Robot", "School", "Batman", "Stitch", "Jack Black", "Shrek", "Luis", "50 Cent", "Beyonce"]
+letters_guessed = []
+word_bank = ["Click", "Marlin", "School", "Batman", "Stitch", "Jack Black", "Rick", "Luis", "50 Cent", "Felicia"]
 word = random.choice(word_bank)
-word_bank[word] = '*'
+
+while guesses_left is 0
+    if 
