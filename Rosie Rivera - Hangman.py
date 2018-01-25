@@ -9,11 +9,15 @@ Outline of Hangman
 5. Create the win condition
 
 """
+letters_guessed = []
+if guess = letters_guessed:
+    letters_guessed.append
+
+print("I am thinking of a word... Guess what word I'm thinking about.")
+word_bank = ["Click", "Marlin", "School", "Batman", "Stitch", "Jack Black", "Rick", "Luis", "50 Cent", "Felicia"]
 list_form = []
 guesses_left = 10
-letters_guessed = []
-word_bank = ["Click", "Marlin", "School", "Batman", "Stitch", "Jack Black", "Rick", "Luis", "50 Cent", "Felicia"]
 word = random.choice(word_bank)
 
-while guesses_left is 0
-    if 
+while guesses_left is 0:
+    if
