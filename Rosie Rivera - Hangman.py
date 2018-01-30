@@ -10,14 +10,12 @@ Outline of Hangman
 5. Create the win condition
 
 """
-# if guess = letters_guessed:
-#     letters_guessed.append
 letters_guessed = []
 word_bank = ["Click", "Marlin", "School", "Batman", "Stitch", "Jack Black", "Rick", "Luis", "50Cent", "Felicia"]
 guesses_left = 10
 word = random.choice(word_bank)
-print(word)
 letter = string.ascii_letters
+end = list(word)
 while guesses_left > 0:
     list_form = []
     for letter in word:
@@ -25,7 +23,9 @@ while guesses_left > 0:
             list_form.append(letter)  # show letter
         else:
             list_form.append("*")  # hide letter
-
+        if list_form == end:
+            print("You're a winner!")
+            exit(0)
     print(list_form)
     guess = input("Guess a letter/Number to reveal the word.").lower()
     letters_guessed.append(guess)
@@ -35,6 +35,4 @@ while guesses_left > 0:
 
     else:
         guesses_left -= 1
-
-
-
+        print("Sorry that's not it")
