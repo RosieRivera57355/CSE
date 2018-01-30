@@ -32,7 +32,9 @@ while guesses_left > 0:
 
     if guess in word:
         print("You got it!")
+        print("You now have %s turns left." % guesses_left)
 
     else:
         guesses_left -= 1
         print("Sorry that's not it")
+        print("You now have %s turns left." % guesses_left)
