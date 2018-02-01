@@ -156,56 +156,124 @@ import random  # imports should be at the top of your program
 # print(c == str(1))  # Compares two strings
 
 # Lists
+#
+# the_count = [1, 2, 3, 4, 5]
+# characters = ["Graves", "Dory", "Boots", "Dora", "Shrek", "Obi-wan", "Carl"]
+# print(characters[4])
+#
+# print(len(characters))  # Gives you the length of the list
+#
+# # Going through lists
+# for char in characters:
+#     print(char)
+#
+# for num in the_count:
+#     print(num ** 2)
+#
+# len(characters)
+# range(3)  # Makes a list of the numbers from 0 to 2
+# range(len(characters))  # Makes a list of ALL INDICES
+#
+# for num in range(len(characters)):
+#     char = characters[num]
+#     print("The character at index %d is %s" % (num, char))
+#
+# str1 = "Hello World!"
+# listOne = list(str1)
+# print(listOne)
+# listOne[11] = '.'
+# print(listOne)
+# newStr = "".join(listOne)
+# print(newStr)
+#
+# # Adding stuff to a list
+# characters.append("Ironman/Batman/whomever you want")
+# characters.append("Yo Mama")
+# print(characters)
+#
+# # Removing things from a list
+# characters.remove("Carl")
+# print(characters)
+#
+# # Removing things from a list from the index
+# characters.pop(6)
+# print(characters)
+#
+# # The string class
+# import string
+# print(string.ascii_letters)
+# print(string.ascii_lowercase)
+# print(string.digits)
+# print(string.punctuation)
+#
+# strTwo = 'ThIs sEntENcE iS uNuSuAL'
+# lowercase = strTwo.lower()
+# print(lowercase)
 
-the_count = [1, 2, 3, 4, 5]
-characters = ["Graves", "Dory", "Boots", "Dora", "Shrek", "Obi-wan", "Carl"]
-print(characters[4])
+# Dictionaries - Make up a key: value pair
+# dictionary = {'name': 'Lance', 'age': 18, 'height': 6 * 12 + 2}
+#
+# # Accessing from a dictionary
+# print(dictionary['name'])
+# print(dictionary['age'])
+# print(dictionary['height'])
+#
+# large_dictionary = {
+#     "California": "CA",
+#     "Michigan": "MI",
+#     "Florida": "FL"
+# }
+# print(large_dictionary['Florida'])
+#
+# larger_dictionary = {
+#     "California": [
+#         'Fresno',
+#         'Sacramento',
+#         'Madera'
+#     ],
+#     "Washington": [
+#         'Seattle',
+#         'Tacoma',
+#         'Olympia',
+#         'Spokane'
+#     ],
+#     "Illinois": [
+#         'Chicago',
+#         'Naperville',
+#         'Peoria'
+#     ]
+# }
+# print(larger_dictionary['Illinois'])
+# print(larger_dictionary['Illinois'][0])
+# print(larger_dictionary['Washington'][3])  # Spokane
 
-print(len(characters))  # Gives you the length of the list
-
-# Going through lists
-for char in characters:
-    print(char)
-
-for num in the_count:
-    print(num ** 2)
-
-len(characters)
-range(3)  # Makes a list of the numbers from 0 to 2
-range(len(characters))  # Makes a list of ALL INDICES
-
-for num in range(len(characters)):
-    char = characters[num]
-    print("The character at index %d is %s" % (num, char))
-
-str1 = "Hello World!"
-listOne = list(str1)
-print(listOne)
-listOne[11] = '.'
-print(listOne)
-newStr = "".join(listOne)
-print(newStr)
-
-# Adding stuff to a list
-characters.append("Ironman/Batman/whomever you want")
-characters.append("Yo Mama")
-print(characters)
-
-# Removing things from a list
-characters.remove("Carl")
-print(characters)
-
-# Removing things from a list from the index
-characters.pop(6)
-print(characters)
-
-# The string class
-import string
-print(string.ascii_letters)
-print(string.ascii_lowercase)
-print(string.digits)
-print(string.punctuation)
-
-strTwo = 'ThIs sEntENcE iS uNuSuAL'
-lowercase = strTwo.lower()
-print(lowercase)
+largest_dictionary = {
+    "CA": {
+        'NAME': "California",
+        'POPULATION': 39250000,
+        'BORDER ST': [
+            'Oregon',
+            'Nevada',
+            'Arizona'
+        ]
+    },
+    "MI": {
+        'NAME': 'Michigan',
+        'POPULATION': 9928000,
+        'BORDER ST': [
+            'Wisconsin',
+            'Ohio',
+            'Indiana'
+        ]
+    },
+    "FL": {
+        'NAME': 'Florida',
+        'POPULATION': 20610000,
+        'BORDER ST': [
+            'Georgia',
+            'Alabama'
+        ]
+    }
+}
+print(largest_dictionary["MI"]["BORDER ST"][1])
+print(largest_dictionary['FL']['BORDER ST'][1])
