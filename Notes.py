@@ -211,18 +211,23 @@ import random  # imports should be at the top of your program
 # print(lowercase)
 
 # Dictionaries - Make up a key: value pair
-# dictionary = {'name': 'Lance', 'age': 18, 'height': 6 * 12 + 2}
+dictionary = {'name': 'Lance', 'age': 18, 'height': 6 * 12 + 2}
 #
 # # Accessing from a dictionary
-# print(dictionary['name'])
-# print(dictionary['age'])
-# print(dictionary['height'])
+print(dictionary['name'])
+print(dictionary['age'])
+print(dictionary['height'])
 #
-# large_dictionary = {
-#     "California": "CA",
-#     "Michigan": "MI",
-#     "Florida": "FL"
-# }
+# Adding to a dictionary
+dictionary['eye colour'] = 'blue'
+dictionary['paper towels'] = True
+print(dictionary)
+
+large_dictionary = {
+    "California": "CA",
+    "Michigan": "MI",
+    "Florida": "FL"
+}
 # print(large_dictionary['Florida'])
 #
 # larger_dictionary = {

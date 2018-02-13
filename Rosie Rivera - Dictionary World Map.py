@@ -1,27 +1,40 @@
 world_map ={
-    'WESTHOUSE': {
-        'NAME': 'WEST OF HOUSE',
-        'DESCRIPTION': 'You are west of a small house',
+    'F-GATE': {
+        'NAME': 'FRONT GATE',
+        'DESCRIPTION': 'The fence seems to continue south and it is locked. It seems you must find another way in so'
+        'that you will not get caught',
         'PATHS': {
-            'NORTH': 'NORTHHOUSE',
-            'SOUTH': 'SOUTHHOUSE'
+            'WEST': 'Parking Lot',
+            'SOUTH': 'Back Fence'
         }
     },
-    'NORTHHOUSE': {
-        'NAME': 'NORTH OF HOUSE',
-        'DESCRIPTION': ' Insert description here',
+    'B-FENCE': {
+        'NAME': 'BROKEN FENCE',
+        'DESCRIPTION': 'The Fence is loose and there is more of the fence to the east',
         'PATHS': {
-            'WEST': 'WESTHOUSE'
+            'NORTH': 'FRONT GATE',
+            'NORTHWEST': 'GARDEN',
+            'EAST': 'SEWER LID'
         }
     },
-    'SOUTHHOUSE': {
+    'GARDEN': {
+        'NAME': 'FLOWER GARDEN',
+        'DESCRIPTION': 'There is a path leading Northeast somewhere and there is a broken fence south of here.',
+        'PATHS': {
+            'SOUTHEAST': 'B-FENCE',
+            'NORTH': 'SOUTH OF HOUSE',
+            'NORTHEAST': 'SHED'
+        }
+    },
+    'S-HOUSE': {
         'NAME': 'SOUTH OF HOUSE',
-        'DESCRIPTION': 'Insert description here',
+        'DESCRIPTION': 'There is a window you could go through if you had something to pry it with.',
         'PATHS': {
-            'WEST': 'WESTHOUSE'
+            'NORTH': 'HOUSE'
         }
     }
 }
 current_node = world_map['SOUTHHOUSE']
 print(current_node['DESCRIPTION'])
 print(current_node['NAME'])
+
