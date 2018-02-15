@@ -27,11 +27,43 @@ world_map = {
     },
     'S-HOUSE': {
         'NAME': 'SOUTH OF HOUSE',
-        'DESCRIPTION': 'There is a window you could go through if you had something to pry it with.',
+        'DESCRIPTION': 'There is a window that is partly open. There seems to be something shining inside',
         'PATHS': {
-            'NORTH': 'HOUSE'
+            'NORTH': 'L-ROOM',
+            'SOUTH': 'GARDEN',
+            'WEST': 'W-HOUSE',
+            'EAST': 'E-HOUSE'
         }
-    }
+    },
+    'L-ROOM': {
+        'NAME': 'HOUSE',
+        'DESCRIPTION': 'There seems to be an upstairs and downstairs...You should look around.',
+       'PATHS': {
+       }
+    },
+    'K-ROOM': {
+        'NAME': 'KITCHEN',
+        'DESCRIPTION': 'There is a fridge, an island, and cupboards. There is a knife on a cutting board, a coffee'
+                       'machine, coffee grounds, and a mug',
+        'PATHS': {
+
+        }
+    },
+    'U-STAIRS': {
+        'NAME': 'UPSTAIRS',
+        'DESCRIPTION': 'There is a room WEST of here and a room EAST of here. There is a mirror and a vase that has'
+                       'some flowers',
+        'PATHS': {
+            'WEST': 'JT-ROOM',
+            'EAST': 'G-ROOM'
+        }
+    },
+    'JT-ROOM': {}
+        'NAME': 'JUSTIN TIMBERLAKES ROOM',
+        'DESCRIPTION': 'There is a phone on the bedside table. There is also a TV, bed, and a drawer.',
+        'PATHS': {
+            'EAST': 'U-STAIRS'
+        }
 }
 current_node = world_map['F-GATE']
 directions = ['NORTH', 'SOUTH', 'EAST', 'WEST', 'NORTHEAST', 'NORTHWEST', 'SOUTHEAST', 'SOUTHWEST', 'UP', 'DOWN']
