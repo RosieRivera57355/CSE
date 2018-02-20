@@ -211,23 +211,23 @@ import random  # imports should be at the top of your program
 # print(lowercase)
 
 # Dictionaries - Make up a key: value pair
-dictionary = {'name': 'Lance', 'age': 18, 'height': 6 * 12 + 2}
+# dictionary = {'name': 'Lance', 'age': 18, 'height': 6 * 12 + 2}
+# #
+# # # Accessing from a dictionary
+# print(dictionary['name'])
+# print(dictionary['age'])
+# print(dictionary['height'])
+# #
+# # Adding to a dictionary
+# dictionary['eye colour'] = 'blue'
+# dictionary['paper towels'] = True
+# print(dictionary)
 #
-# # Accessing from a dictionary
-print(dictionary['name'])
-print(dictionary['age'])
-print(dictionary['height'])
-#
-# Adding to a dictionary
-dictionary['eye colour'] = 'blue'
-dictionary['paper towels'] = True
-print(dictionary)
-
-large_dictionary = {
-    "California": "CA",
-    "Michigan": "MI",
-    "Florida": "FL"
-}
+# large_dictionary = {
+#     "California": "CA",
+#     "Michigan": "MI",
+#     "Florida": "FL"
+# }
 # print(large_dictionary['Florida'])
 #
 # larger_dictionary = {
@@ -251,34 +251,72 @@ large_dictionary = {
 # print(larger_dictionary['Illinois'])
 # print(larger_dictionary['Illinois'][0])
 # print(larger_dictionary['Washington'][3])  # Spokane
+#
+# largest_dictionary = {
+#     "CA": {
+#         'NAME': "California",
+#         'POPULATION': 39250000,
+#         'BORDER ST': [
+#             'Oregon',
+#             'Nevada',
+#             'Arizona'
+#         ]
+#     },
+#     "MI": {
+#         'NAME': 'Michigan',
+#         'POPULATION': 9928000,
+#         'BORDER ST': [
+#             'Wisconsin',
+#             'Ohio',
+#             'Indiana'
+#         ]
+#     },
+#     "FL": {
+#         'NAME': 'Florida',
+#         'POPULATION': 20610000,
+#         'BORDER ST': [
+#             'Georgia',
+#             'Alabama'
+#         ]
+#     }
+# }
+# print(largest_dictionary["MI"]["BORDER ST"][1])
+# print(largest_dictionary['FL']['BORDER ST'][1])
 
-largest_dictionary = {
-    "CA": {
-        'NAME': "California",
-        'POPULATION': 39250000,
-        'BORDER ST': [
-            'Oregon',
-            'Nevada',
-            'Arizona'
-        ]
-    },
-    "MI": {
-        'NAME': 'Michigan',
-        'POPULATION': 9928000,
-        'BORDER ST': [
-            'Wisconsin',
-            'Ohio',
-            'Indiana'
-        ]
-    },
-    "FL": {
-        'NAME': 'Florida',
-        'POPULATION': 20610000,
-        'BORDER ST': [
-            'Georgia',
-            'Alabama'
-        ]
-    }
-}
-print(largest_dictionary["MI"]["BORDER ST"][1])
-print(largest_dictionary['FL']['BORDER ST'][1])
+# Defining Function <Notes>
+# def hello_world():
+#     print("Hello World")
+#
+#
+# hello_world()
+# def square_it(number):
+#     return number ** 2
+#
+#
+# print(square_it(3))
+# def tip_calc(subtotal):
+#     tip_amt = subtotal * 0.18  # tip_amt is a local variable
+#     return tip_amt
+#     print("The tip amount is $%d" % tip_amt)
+#
+#
+# def total_bill(subtotal):
+#     total = subtotal + tip_calc(subtotal)
+#     return total
+#
+#
+# print(total_bill(100))
+#
+# def distance(x1, x2, y1, y2):
+#     inside = (x2 - x1) ** 2 + (y2 - y1) **2
+#     answer = inside ** 0.5
+#     return answer
+#
+
+# print(distance(0, 0, 3, 4))
+
+
+def pythagorean(a, b):
+    answer ** 2 + b ** 2)
+
+print(pythagorean(5, 12)
