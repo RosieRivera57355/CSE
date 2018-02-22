@@ -58,7 +58,7 @@ world_map = {
             'EAST': 'G-ROOM'
         }
     },
-    'JT-ROOM': {}
+    'JT-ROOM': {},
         'NAME': 'JUSTIN TIMBERLAKES ROOM',
         'DESCRIPTION': 'There is a phone on the bedside table. There is also a TV, bed, and a drawer.',
         'PATHS': {
@@ -82,3 +82,7 @@ while True:
         print("Command not Found")
     if command == 'quit':
         quit(0)
+
+class Room(object):
+    def __init__(self):
+
