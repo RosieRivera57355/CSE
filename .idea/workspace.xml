@@ -34,17 +34,37 @@
       <file leaf-file-name="Notes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Notes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="348" column="35" lean-forward="true" selection-start-line="348" selection-start-column="35" selection-end-line="348" selection-end-column="35" />
+            <state relative-caret-position="260">
+              <caret line="318" column="0" lean-forward="false" selection-start-line="318" selection-start-column="0" selection-end-line="323" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rosie Rivera - Dictionary World Map.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Rosie Rivera - Pthyagorean Therom.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rosie Rivera - Pthyagorean Therom.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rosie Rivera - World Map OOP.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Rosie Rivera - World Map OOP.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rosie Rivera - Dictionary World Map.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rosie Rivera - Dictionary World Map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
+            <state relative-caret-position="464">
               <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding />
             </state>
@@ -105,13 +125,16 @@
         <option value="$PROJECT_DIR$/Black Jack.py" />
         <option value="$PROJECT_DIR$/Lucky 7s.py" />
         <option value="$PROJECT_DIR$/Rosie Rivera - Lucky 7s.py" />
-        <option value="$PROJECT_DIR$/Notes.py" />
         <option value="$PROJECT_DIR$/Rosie Rivera - Dictionary World Map.py" />
+        <option value="$PROJECT_DIR$/Notes.py" />
+        <option value="$PROJECT_DIR$/Rosie Rivera - Pthyagorean Therom.py" />
+        <option value="$PROJECT_DIR$/Rosie Rivera - World Map OOP.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-6" />
+    <option name="x" value="92" />
+    <option name="y" value="-20" />
     <option name="width" value="1290" />
     <option name="height" value="735" />
   </component>
@@ -130,6 +153,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -141,7 +165,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -161,7 +184,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Notes">
+  <component name="RunManager" selected="Python.Rosie Rivera - Pthyagorean Therom">
     <configuration name="Black Jack" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -230,7 +253,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Rosie Rivera - Hangman" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Rosie Rivera - Pthyagorean Therom" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -242,7 +265,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CSE" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rosie Rivera - Hangman.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rosie Rivera - Pthyagorean Therom.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -251,16 +274,16 @@
       <item index="0" class="java.lang.String" itemvalue="Python.Notes" />
       <item index="1" class="java.lang.String" itemvalue="Python.Rosie Rivera - Guess Game" />
       <item index="2" class="java.lang.String" itemvalue="Python.Black Jack" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Rosie Rivera - Hangman" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Rosie Rivera - Dictionary World Map" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Rosie Rivera - Dictionary World Map" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Rosie Rivera - Pthyagorean Therom" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Notes" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Rosie Rivera - Dictionary World Map" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Rosie Rivera - Guess Game" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Black Jack" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Rosie Rivera - Hangman" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Rosie Rivera - Pthyagorean Therom" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Notes" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Rosie Rivera - Dictionary World Map" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Rosie Rivera - Guess Game" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Black Jack" />
       </list>
     </recent_temporary>
   </component>
@@ -281,12 +304,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28111273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28111273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4464" sideWeight="0.50885296" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43533123" sideWeight="0.49114704" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43533123" sideWeight="0.49114704" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -311,22 +334,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Warm-Up.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rosie Rivera - Guess Game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Notes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1955">
@@ -698,18 +705,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Notes.py">
+    <entry file="file://$PROJECT_DIR$/Rosie Rivera - Dictionary World Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="348" column="35" lean-forward="true" selection-start-line="348" selection-start-column="35" selection-end-line="348" selection-end-column="35" />
+        <state relative-caret-position="464">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rosie Rivera - Dictionary World Map.py">
+    <entry file="file://$PROJECT_DIR$/Notes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        <state relative-caret-position="260">
+          <caret line="318" column="0" lean-forward="false" selection-start-line="318" selection-start-column="0" selection-end-line="323" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rosie Rivera - Pthyagorean Therom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rosie Rivera - World Map OOP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
           <folding />
         </state>
       </provider>

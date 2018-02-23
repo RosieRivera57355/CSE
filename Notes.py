@@ -316,10 +316,12 @@ import random  # imports should be at the top of your program
 # print(distance(0, 0, 3, 4))
 
 #
-# def pythagorean(a, b):
-#     answer = (a ** 2 + b ** 2)
-#
-# print(pythagorean(5, 12)
+def pythagorean(a, b):
+    c = (a ** 2 + b ** 2)
+    answer = c ** .5
+    return answer
+
+print(pythagorean(5, 12)
 
 # Defining a class
 
