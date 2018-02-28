@@ -1,5 +1,5 @@
 class Room(object):
-    def __int__(self, name, north, south, west, east, northeast, northwest, southeast, southwest):
+    def __int__(self, name, north, south, west, east, northeast, northwest, southeast, southwest, up, down, description, paths):
         self.name = name
         self.north = north
         self.south = south
@@ -9,7 +9,6 @@ class Room(object):
         self.northwest = northwest
         self.southeast = southeast
         self.southwest = southwest
-        
 
     def move(self, direction):
         global current_node
