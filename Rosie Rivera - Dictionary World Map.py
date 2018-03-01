@@ -66,7 +66,35 @@ world_map = {
         }
     },
     'PARKING': {
-        'NAME': '',
+        'NAME': 'PARKING GARAGE',
+        'DESCRIPTION': 'There is a phone on the bedside table. There is also a TV, bed, and a drawer.',
+        'PATHS': {
+            'EAST':'U-STAIRS'
+        }
+    },
+    'D-HOUSE': {
+        'NAME': 'DOG HOUSE',
+        'DESCRIPTION': 'There is a phone on the bedside table. There is also a TV, bed, and a drawer.',
+        'PATHS': {
+            'EAST':'U-STAIRS'
+        }
+    },
+    'D-ROOM': {
+        'NAME': 'DOG ROOM',
+        'DESCRIPTION': 'There is a phone on the bedside table. There is also a TV, bed, and a drawer.',
+        'PATHS': {
+            'EAST':'U-STAIRS'
+        }
+    },
+    'Y-BACK': {
+        'NAME': 'BACKYARD',
+        'DESCRIPTION': 'There is a phone on the bedside table. There is also a TV, bed, and a drawer.',
+        'PATHS': {
+            'EAST':'U-STAIRS'
+        }
+    },
+    'SHED': {
+        'NAME': 'SHED',
         'DESCRIPTION': 'There is a phone on the bedside table. There is also a TV, bed, and a drawer.',
         'PATHS': {
             'EAST':'U-STAIRS'
@@ -90,9 +118,3 @@ while True:
         print("Command not Found")
     if command == 'quit':
         quit(0)
-
-    class Room(object):
-        def __init__(self):
-
-
-
