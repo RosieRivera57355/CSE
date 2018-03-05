@@ -39,6 +39,7 @@ world_map = {
         'NAME': 'HOUSE',
         'DESCRIPTION': 'There seems to be an upstairs and downstairs...You should look around.',
        'PATHS': {
+           ''
        }
     },
     'K-ROOM': {
@@ -62,52 +63,71 @@ world_map = {
         'NAME': 'JUSTIN TIMBERLAKES ROOM',
         'DESCRIPTION': 'There is a phone on the bedside table. There is also a TV, bed, and a drawer.',
         'PATHS': {
-            'EAST':'U-STAIRS'
+            'EAST': 'U-STAIRS'
         }
     },
     'PARKING': {
         'NAME': 'PARKING GARAGE',
-        'DESCRIPTION': 'There is a phone on the bedside table. There is also a TV, bed, and a drawer.',
+        'DESCRIPTION': 'There is a garage that is open. Inside, there is are 3 boxes with stuff inside.',
         'PATHS': {
-            'EAST':'U-STAIRS'
+            'UP':'U-STAIRS',
+            'SOUTH':'L-ROOM',
+            'DOWN':'D-STAIRS'
         }
     },
     'D-HOUSE': {
         'NAME': 'DOG HOUSE',
-        'DESCRIPTION': 'There is a phone on the bedside table. There is also a TV, bed, and a drawer.',
+        'DESCRIPTION': 'There is a big dog house and from outside you can hear a big dog barking. Will you go inside?',
         'PATHS': {
-            'EAST':'U-STAIRS'
+            'SOUTH':'Y-BACK',
+            'NORTH':'D-ROOM'
         }
     },
     'D-ROOM': {
         'NAME': 'DOG ROOM',
-        'DESCRIPTION': 'There is a phone on the bedside table. There is also a TV, bed, and a drawer.',
+        'DESCRIPTION': 'There is a small dog in here and it seems to want something. You cannot get close enough to it'
+                       'to see what is on its collar.',
         'PATHS': {
-            'EAST':'U-STAIRS'
+            'SOUTH':'D-HOUSE'
         }
     },
     'Y-BACK': {
         'NAME': 'BACKYARD',
         'DESCRIPTION': 'There is a phone on the bedside table. There is also a TV, bed, and a drawer.',
         'PATHS': {
-            'EAST':'U-STAIRS'
+            'WEST':'K-ROOM',
+            'SOUTH':'SHED'
         }
     },
     'SHED': {
-        'NAME': 'SHED',
-        'DESCRIPTION': 'There is a phone on the bedside table. There is also a TV, bed, and a drawer.',
+        'NAME': 'SHED'
+        'DESCRIPTION': 'There is two paths one goes Southwest and one goes north. Inside there is a picture.',
         'PATHS': {
-            'EAST':'U-STAIRS'
+            'NORTH': "Y-BACK",
+            'SOUTH': 'GARDEN'
         }
     },
-}
-current_node = world_map['F-GATE']
-directions = ['NORTH', 'SOUTH', 'EAST', 'WEST', 'NORTHEAST', 'NORTHWEST', 'SOUTHEAST', 'SOUTHWEST', 'UP', 'DOWN']
+    'D-STAIRS': {
+        'NAME': 'DOWN STAIRS',
+        'DESCRIPTION': 'There seems to be a shrine of some kind. It is pretty creepy down here and you can see better if you have a light.',
+        'PATHS': {
+            'UP': ''
+        }
+    }
+current_node = world_map
+directions = ['north', 'south', 'east', 'west', 'northeast', 'northwest', 'southeast', 'southwest', 'up', 'down']
+short_directions = ['n', 's', 'e', 'w', 'ne', 'nw', 'se', 'sw', 'u', 'd']
 
 while True:
     print(current_node["NAME"])
     print(current_node['DESCRIPTION'])
-    command = input('>_')
+    command = input('>_').lower().strip()
+    if command == 'quit':
+        quit(0)
+    elif command in short_directions:
+        # Finds the command in short directions (index number)
+        pos = short_directions.index(command)
+        command = directions[pos]
     if command in directions:
         try:
             name_of_node = current_node['PATHS'][command]
@@ -116,5 +136,3 @@ while True:
             print("You cannot go that way.")
     else:
         print("Command not Found")
-    if command == 'quit':
-        quit(0)

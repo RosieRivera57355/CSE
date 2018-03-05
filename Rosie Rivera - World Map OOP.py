@@ -9,6 +9,10 @@ class Room(object):
         self.northwest = northwest
         self.southeast = southeast
         self.southwest = southwest
+        self.up = up
+        self.down = down
+        self.description = description
+        self.paths = paths
 
     def move(self, direction):
         global current_node
