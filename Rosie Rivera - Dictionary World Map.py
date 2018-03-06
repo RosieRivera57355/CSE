@@ -39,7 +39,8 @@ world_map = {
         'NAME': 'HOUSE',
         'DESCRIPTION': 'There seems to be an upstairs and downstairs...You should look around.',
        'PATHS': {
-           ''
+           'DOWN':'D-STAIRS',
+           'UP':'U-STAIRS'
        }
     },
     'K-ROOM': {
@@ -56,7 +57,8 @@ world_map = {
                        'some flowers',
         'PATHS': {
             'WEST': 'JT-ROOM',
-            'EAST': 'G-ROOM'
+            'EAST': 'G-ROOM',
+            'DOWN': 'L-ROOM'
         }
     },
     'JT-ROOM': {
@@ -93,7 +95,7 @@ world_map = {
     },
     'Y-BACK': {
         'NAME': 'BACKYARD',
-        'DESCRIPTION': 'There is a phone on the bedside table. There is also a TV, bed, and a drawer.',
+        'DESCRIPTION': 'There is a shed south of here. There could be something useful in there.',
         'PATHS': {
             'WEST':'K-ROOM',
             'SOUTH':'SHED'
@@ -103,15 +105,16 @@ world_map = {
         'NAME': 'SHED'
         'DESCRIPTION': 'There is two paths one goes Southwest and one goes north. Inside there is a picture.',
         'PATHS': {
-            'NORTH': "Y-BACK",
+            'NORTH': 'Y-BACK',
             'SOUTH': 'GARDEN'
         }
     },
     'D-STAIRS': {
         'NAME': 'DOWN STAIRS',
-        'DESCRIPTION': 'There seems to be a shrine of some kind. It is pretty creepy down here and you can see better if you have a light.',
+        'DESCRIPTION': 'There seems to be a shrine of some kind. It is pretty creepy down here and you can see \n'
+                       'better if you find a light.',
         'PATHS': {
-            'UP': ''
+            'UP': 'L-ROOM'
         }
     }
 current_node = world_map

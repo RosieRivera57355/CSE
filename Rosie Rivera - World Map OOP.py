@@ -21,3 +21,5 @@ class Room(object):
 
 north_house = Room('West of House', 'north_house')
 west_house = Room('North of House', None)
+east_house =Room('South of House', 'south_house')
+south_house = Room('East of House', None)
