@@ -111,8 +111,7 @@ world_map = {
     },
     'D-STAIRS': {
         'NAME': 'DOWN STAIRS',
-        'DESCRIPTION': 'There seems to be a shrine of some kind. It is pretty creepy down here and you can see \n'
-                       'better if you find a light.',
+        'DESCRIPTION': ,
         'PATHS': {
             'UP': 'L-ROOM'
         }
