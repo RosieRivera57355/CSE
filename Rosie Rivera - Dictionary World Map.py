@@ -45,8 +45,8 @@ world_map = {
     },
     'K-ROOM': {
         'NAME': 'KITCHEN',
-        'DESCRIPTION': 'There is a fridge, an island, and cupboards. There is a knife on a cutting board, a coffee'
-                       'machine, coffee grounds, and a mug',
+        'DESCRIPTION': 'There is a fridge, an island, and cupboards.\n There is a knife on a cutting board, a sink,'
+                       ' a coffee machine, coffee grounds, and a mug',
         'PATHS': {
 
         }
@@ -111,7 +111,7 @@ world_map = {
     },
     'D-STAIRS': {
         'NAME': 'DOWN STAIRS',
-        'DESCRIPTION': ,
+        'DESCRIPTION': 'It is dark and there is a room with a whole bunch of junk.',
         'PATHS': {
             'UP': 'L-ROOM'
         }
