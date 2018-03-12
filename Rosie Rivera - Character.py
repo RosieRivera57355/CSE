@@ -11,7 +11,7 @@ class Character(object):
         def description(self):
             self.name = 'Billy'
             self.description = 'Billy works for the local news station. He is very athletic and will do \n' \
-                               ' anything to keep his job.' 
+                               ' anything to keep his job.'
         def stats(self):
             self.health = 100
 
