@@ -38,10 +38,10 @@ world_map = {
     'L-ROOM': {
         'NAME': 'HOUSE',
         'DESCRIPTION': 'There seems to be an upstairs and downstairs...You should look around.',
-       'PATHS': {
-           'DOWN':'D-STAIRS',
-           'UP':'U-STAIRS'
-       }
+        'PATHS': {
+           'DOWN': 'D-STAIRS',
+           'UP': 'U-STAIRS'
+                }
     },
     'K-ROOM': {
         'NAME': 'KITCHEN',
@@ -72,17 +72,17 @@ world_map = {
         'NAME': 'PARKING GARAGE',
         'DESCRIPTION': 'There is a garage that is open. Inside, there is are 3 boxes with stuff inside.',
         'PATHS': {
-            'UP':'U-STAIRS',
-            'SOUTH':'L-ROOM',
-            'DOWN':'D-STAIRS'
+            'UP': 'U-STAIRS',
+            'SOUTH': 'L-ROOM',
+            'DOWN': 'D-STAIRS'
         }
     },
     'D-HOUSE': {
         'NAME': 'DOG HOUSE',
         'DESCRIPTION': 'There is a big dog house and from outside you can hear a big dog barking. Will you go inside?',
         'PATHS': {
-            'SOUTH':'Y-BACK',
-            'NORTH':'D-ROOM'
+            'SOUTH': 'Y-BACK',
+            'NORTH': 'D-ROOM'
         }
     },
     'D-ROOM': {
@@ -90,20 +90,20 @@ world_map = {
         'DESCRIPTION': 'There is a small dog in here and it seems to want something. You cannot get close enough to it'
                        'to see what is on its collar.',
         'PATHS': {
-            'SOUTH':'D-HOUSE'
+            'SOUTH': 'D-HOUSE'
         }
     },
     'Y-BACK': {
         'NAME': 'BACKYARD',
         'DESCRIPTION': 'There is a shed south of here. There could be something useful in there.',
         'PATHS': {
-            'WEST':'K-ROOM',
-            'SOUTH':'SHED'
+            'WEST': 'K-ROOM',
+            'SOUTH': 'SHED'
         }
     },
     'SHED': {
-        'NAME': 'SHED'
-        'DESCRIPTION': 'There is two paths one goes Southwest and one goes north. Inside there is a picture.',
+        'NAME': 'SHED',
+        'DESCRIPTION': 'There are two paths one goes Southwest and one goes north. Inside there is a picture.',
         'PATHS': {
             'NORTH': 'Y-BACK',
             'SOUTH': 'GARDEN'
@@ -116,14 +116,15 @@ world_map = {
             'UP': 'L-ROOM'
         }
     }
-current_node = world_map
-directions = ['north', 'south', 'east', 'west', 'northeast', 'northwest', 'southeast', 'southwest', 'up', 'down']
-short_directions = ['n', 's', 'e', 'w', 'ne', 'nw', 'se', 'sw', 'u', 'd']
+}
+current_node = world_map['F-GATE']
+directions = ['NORTH', 'SOUTH', 'EAST', 'WEST', 'NORTHEAST', 'NORTHWEST', 'SOUTHEAST', 'SOUTHWEST', 'UP', 'DOWN']
+short_directions = ['N', 'S', 'E', 'W', 'NE', 'NW', 'SE', 'SW', 'U', 'D']
 
 while True:
     print(current_node["NAME"])
     print(current_node['DESCRIPTION'])
-    command = input('>_').lower().strip()
+    command = input('>_').upper().strip()
     if command == 'quit':
         quit(0)
     elif command in short_directions:
