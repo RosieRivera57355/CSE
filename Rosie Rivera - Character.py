@@ -3,8 +3,8 @@ class Character(object):
         self.name = name
         self.description = description
         self.inventory = inventory
-        self.interact = False
-        self.look = False
+        self.interact = interact
+        self.look = look
         self.stats = stats
         self.health = health
 

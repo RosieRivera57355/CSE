@@ -11,7 +11,7 @@ while turns_left and right_guess is False:
     if answer == number:
         print("GOOD JOB!")
         right_guess = True
-    elif answer >=  number:
+    elif answer >= number:
         print("lower")
         turns_left -= 1
     elif answer <= number:
@@ -19,8 +19,6 @@ while turns_left and right_guess is False:
         turns_left -= 1
     if turns_left is 0:
         print("OOOOOOOOHHHHHHH You were close but not really the answer was %s..." % number)
-
-
 
 # Generate a number
 # Get a number (input) from the user
