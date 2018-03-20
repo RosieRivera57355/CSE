@@ -46,7 +46,7 @@ class Tesla(KeylessCar):
 
     def turn_on(self):
         Car.turn_on(self)
-3
+
 
 musk_car = Tesla(2, 400)
 musk_car.turn_on()

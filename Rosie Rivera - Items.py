@@ -1,7 +1,7 @@
 class Item(object):
-    def __init__(self, name, weight):
+    def __init__(self, name, use):
         self.name = name
-        self.weight = weight
+        self.use = use
 
     def drop(self):
         print('You dropped %s' % self.name)
@@ -9,11 +9,30 @@ class Item(object):
     def pick_up(self):
         print('You picked up %s' % self.name)
 
+
+class house(Item):
+    def __init__(self, name, use):
+        super(house, self).__init__(name, 'open')
+
     def open(self):
         print('You opened the %s' % self.name)
 
 
-class house_parts(Item):
-    def __init__(self, window, fence):
-        self.window = window
-        self.fence = fence
+class tools(Item):
+    def __init__(self, name, use):
+        super(tools, self).__init__(name, use)
+
+    def
+
+
+class furniture(Item):
+    def __init__(self, name, use):
+        super(furniture, self).__init__(name, use)
+
+
+class kitchen(Item):
+    def __init__(self, name, use).__init__(name, use)
+
+
+class misc(Item):
+    def __init__(self).__init__(name, use)
