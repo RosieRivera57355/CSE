@@ -20,14 +20,17 @@ class house(Item):
 
 class tools(Item):
     def __init__(self, name, use):
-        super(tools, self).__init__(name, use)
+        super(tools, self).__init__(name, 'use')
 
-    def
+    def use(self):
+        print('You used %s' % self.name)
 
 
 class furniture(Item):
     def __init__(self, name, use):
         super(furniture, self).__init__(name, use)
+
+    def
 
 
 class kitchen(Item):
