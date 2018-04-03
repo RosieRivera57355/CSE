@@ -10,32 +10,38 @@ class Item(object):
         print('You picked up %s' % self.name)
 
 
-class house(Item):
+class House(Item):
     def __init__(self, name, use):
-        super(house, self).__init__(name, 'open')
+        super(House, self).__init__(name, 'open')
 
     def open(self):
         print('You opened the %s' % self.name)
 
 
-class tools(Item):
+class Tools(Item):
     def __init__(self, name, use):
-        super(tools, self).__init__(name, 'use')
+        super(Tools, self).__init__(name, 'use')
 
     def use(self):
         print('You used %s' % self.name)
 
 
-class furniture(Item):
+class Furniture(Item):
     def __init__(self, name, use):
-        super(furniture, self).__init__(name, use)
+        super(Furniture, self).__init__(name, use)
 
-    def
+    def move(self):
+        print('You moved %s.' % self.name)
+
+    def open(self):
+        print('You opened %s' % self.name)
 
 
-class kitchen(Item):
-    def __init__(self, name, use).__init__(name, use)
+class Kitchen(Item):
+    def __init__(self, name, use):
+        super(Kitchen, self).__init__(name, use)
 
 
-class misc(Item):
-    def __init__(self).__init__(name, use)
+class Misc(Item):
+    def __init__(self, name, use):
+        super(Misc, self).__init__(name, use)
