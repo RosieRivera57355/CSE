@@ -21,24 +21,24 @@ class House(Item):
 
 
 class Window(House):
-    def __init__(self, name, use, description):
-        super(Window, self).__init__('Window', 'open', description)
-
-    def dscrb(self):
-        print('%s' % self.description)
+    def __init__(self, open):
+        super(Window, self).__init__('window', 'open', 'The window is partly open')
 
     def open(self):
-        print('You opened the %s.' % self.name)
+        print('You opened the window.')
 
 
 class Fence(House):
     def __init__(self, name, use, description):
-        super(House, self).__init__('Fence', 'open', 'There is a loose board')
+        super(House, self).__init__(name ,use , description)
 
-    def dscrb(self):
-        print('%s' % self.description)
+    def description(self):
+        print('There is a loose board.')
 
-    def open(self):
+    def name(self):
+        print('Fence')
+
+    def use(self):
         print('You opened the %s' % self.name)
 
 
@@ -51,6 +51,11 @@ class Knife(Tools):
     def __init__(self, name, use, description):
         super(Knife, self).__init__('Knife', 'cut', 'The knife looks like it can cut through many things.')
 
+    def name(self):
+        print('knife')
+
+    def use(self):
+        print('')
 
 class Key(Tools):
     def __init__(self, name, use, description):
