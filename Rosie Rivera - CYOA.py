@@ -13,12 +13,6 @@ class Item(object):
         self.name = name
         self.use = use
 
-    def drop(self):
-        print('You dropped %s' % self.name)
-
-    def pick_up(self):
-        print('You picked up %s' % self.name)
-
 
 class House(Item, open):
     def __init__(self, name, use):
