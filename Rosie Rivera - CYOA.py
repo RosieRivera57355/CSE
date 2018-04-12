@@ -8,6 +8,19 @@
 # - controller
 
 
+class Room(object):
+    def __int__(self, name, north, south, west, east, up, down, description, paths):
+        self.name = name
+        self.north = north
+        self.south = south
+        self.west = west
+        self.east = east
+        self.up = up
+        self.down = down
+        self.description = description
+        self.paths = paths
+
+
 class Item(object):
     def __init__(self, name, use):
         self.name = name
@@ -33,11 +46,8 @@ class Window(House):
 
 
 class Tools(Item):
-    def __init__(self, name, use):
-        super(Tools, self).__init__(name, use)
-
-    def use(self):
-        print('You used %s' % self.name)
+    def __init__(self, name):
+        super(Tools, self).__init__(name)
 
 
 class Furniture(Item):
@@ -69,14 +79,26 @@ class Helper(Item):
 
 
 class Knife(Helper):
-    def __init__(self, cut):
+    def __init__(self, pick_up):
         super(Knife, self).__init__('Knife', 'cut')
-        self.cut = cut
+        self.pick_up = pick_up
 
-    def cut(self):
-        print('You cut the potatoes.')
+    def pick_up(self):
+        print('You picked up the knife')
 
 
 class Key(Helper):
-    def __init__(self):
+    def __init__(self, open):
         super(Key, self).__init__('Key', 'open')
+        self.open = open
+
+    def open(self):
+        print('You opened the room.')
+
+
+F_GATE = Room('Front Gate', None, 'B_FENCE', None, None, None, 'The FRONT GATE is locked. Time to find another way.')
+
+
+    def move(self, direction):
+        global current_node
+        current_node = globals()[getattr(self, direction)]
