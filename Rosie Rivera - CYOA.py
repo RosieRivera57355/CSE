@@ -8,19 +8,6 @@
 # - controller
 
 
-class Room(object):
-    def __int__(self, name, north, south, west, east, up, down, description, paths):
-        self.name = name
-        self.north = north
-        self.south = south
-        self.west = west
-        self.east = east
-        self.up = up
-        self.down = down
-        self.description = description
-        self.paths = paths
-
-
 class Item(object):
     def __init__(self, name, use):
         self.name = name
@@ -96,9 +83,19 @@ class Key(Helper):
         print('You opened the room.')
 
 
-F_GATE = Room('Front Gate', None, 'B_FENCE', None, None, None, 'The FRONT GATE is locked. Time to find another way.')
-
+class Room(object):
+    def __int__(self, name, north, south, west, east, up, down, description):
+        self.name = name
+        self.north = north
+        self.south = south
+        self.west = west
+        self.east = east
+        self.up = up
+        self.down = down
+        self.description = description
 
     def move(self, direction):
         global current_node
         current_node = globals()[getattr(self, direction)]
+
+F_GATE = Room('Front Gate', None, 'B_FENCE', None, None, None, 'The Front Gate is locked. Time to find another way.')

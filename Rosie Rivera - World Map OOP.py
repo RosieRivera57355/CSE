@@ -19,5 +19,5 @@ class Room(object):
         current_node = globals()[getattr(self, direction)]
 
 
-north_house = Room('West of House', 'north_house')
+fence = Room('West of House', 'north_house')
 west_house = Room('North of House', None)
