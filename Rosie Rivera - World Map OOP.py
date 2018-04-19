@@ -1,5 +1,6 @@
 class Room(object):
-    def __init__(self, name, north, south, west, east, northwest, northeast, southwest, southeast, up, down, description):
+    def __init__(self, name, north, south, west, east, northwest, northeast, southwest, southeast, up, down,
+                 description):
         self.name = name
         self.north = north
         self.south = south
@@ -18,10 +19,8 @@ class Room(object):
         current_node = globals()[getattr(self, direction)]
 
 
-direction = ('NORTH', 'SOUTH', 'WEST', 'EAST', 'NORTHWEST', 'NORTHEAST', 'SOUTHWEST', 'SOUTHEAST', 'UP', 'DOWN')
+directions = ('NORTH', 'SOUTH', 'WEST', 'EAST', 'NORTHWEST', 'NORTHEAST', 'SOUTHWEST', 'SOUTHEAST', 'UP', 'DOWN')
 short_direction = ('N', 'S', 'W', 'E', 'NW', 'NE', 'SW', 'SE', 'U', 'D')
-
-
 
 f_gate = Room('Front Gate', None, 'Fence', None, None, None, None, None, None, None, None,
               'The Gate is locked. You must look for another.')
@@ -41,7 +40,7 @@ up_stairs = Room('Up Stairs', None, None, 'Justin Timberlakes Room', 'Guest Room
                                       'There is a mirror and a vase that has some flowers')
 jt_room = Room('Justin Timberlakes', None, None, None, 'Up Stairs', None, None, None, None, None, None,
                'There is a phone on the bedside table. There is also a TV, bed, and a drawer.')
-parking_lot = Room('Parking Lot', 'Garage', 'Living Room', None, None, None, None, None, None, None,
+parking_lot = Room('Parking Lot', 'Garage', 'Living Room', None, None, None, None, None, None, None, None,
                    'There is a garage that is open. Inside, there is are 3 boxes with stuff inside.')
 d_house = Room('Dog House', 'Dogs Room', 'Back Yard', None, None, None, None, None, None, None, None,
                'There is a big dog house and from outside you can hear a big dog barking. Will you go inside?')
@@ -50,19 +49,22 @@ d_room = Room('Dog Room', None, 'Dog House', None, None, None, None, None, None,
               'close enough to it to see what is on its collar.')
 y_back = Room('Back Yard', None, 'Shed', 'Kitchen', None, None, None, None, None, None, None,
               'There is a shed south of here. There could be something useful in there.')
-
+shed = Room('Shed', 'Back Yard', 'Garden', None, None, None, None, None, None, None, None,
+            'There are two paths one goes Southwest and one goes north. Inside there is a picture.')
+d_stairs = Room('Down Stairs', None, None, None, None, None, None, None, None, 'Living Room', None,
+                'It is dark and there is a room with a whole bunch of junk.')
 current_node = f_gate
 
 while True:
     print(current_node.name)
-    print(current_node.descrition)
+    print(current_node.description)
     command = input('>_').upper().strip()
     if command == 'quit':
         quit(0)
     elif command in short_direction:
         pos = short_direction.index(command)
-        command = direction[pos]
-    if command in direction:
+        command = directions[pos]
+    if command in directions:
         try:
             current_node.move(command)
         except KeyError:
