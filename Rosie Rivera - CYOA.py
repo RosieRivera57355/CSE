@@ -43,8 +43,8 @@ class Furniture(Item):
 
 
 class Fridge(Furniture):
-    def __init__(self):
-        super(Fridge, self).__init__('Fridge', 'open')
+    def __init__(self, ):
+        super(Fridge, self).__init__('Fridge')
 
     def open(self):
         print('There are some frozen chicken nuggets.')
