@@ -14,19 +14,19 @@ class Item(object):
         self.use = use
 
 
-class House(Item, open):
-    def __init__(self, name, use):
-        super(House, self).__init__(name, use)
-        self.open = open
+class House(Item):
+    def __init__(self, name, opens):
+        super(House, self).__init__(name, opens)
+        self.opens = opens
 
     def use(self):
         print('You opened the %s' % self.name)
 
 
 class Window(House):
-    def __init__(self, open):
+    def __init__(self, opens):
         super(Window, self).__init__('window', 'open')
-        self.open = open
+        self.ope = opens
 
     def open(self):
         print('You opened the window.')
@@ -43,10 +43,10 @@ class Furniture(Item):
 
 
 class Fridge(Furniture):
-    def __init__(self, ):
-        super(Fridge, self).__init__('Fridge')
+    def __init__(self, opens):
+        super(Fridge, self).__init__('Fridge', 'opens')
 
-    def open(self):
+    def opens(self):
         print('There are some frozen chicken nuggets.')
 
 
@@ -75,9 +75,9 @@ class Knife(Helper):
 
 
 class Key(Helper):
-    def __init__(self, open):
+    def __init__(self, ope):
         super(Key, self).__init__('Key', 'open')
-        self.open = open
+        self.ope = ope
 
     def open(self):
         print('You opened the room.')
