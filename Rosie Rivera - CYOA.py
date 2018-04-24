@@ -6,6 +6,8 @@
 #     - rooms
 # - instantiation
 # - controller
+food = 0
+health = 100
 
 
 class Item(object):
@@ -26,15 +28,10 @@ class House(Item):
 class Window(House):
     def __init__(self, opens):
         super(Window, self).__init__('window', 'open')
-        self.ope = opens
+        self.opens = opens
 
-    def open(self):
+    def opens(self):
         print('You opened the window.')
-
-
-class Tools(Item):
-    def __init__(self, name, use):
-        super(Tools, self).__init__(name, use)
 
 
 class Furniture(Item):
@@ -43,8 +40,14 @@ class Furniture(Item):
 
 
 class Fridge(Furniture):
-    def __init__(self, opens):
+    def __init__(self, opens, take_food):
         super(Fridge, self).__init__('Fridge', 'opens')
+        self.opens = opens
+        self.take_food = take_food
+
+    def take_food(self):
+        print('You have take all of the food in the fridge.')
+        food += 10
 
     def opens(self):
         print('There are some frozen chicken nuggets.')
@@ -75,12 +78,20 @@ class Knife(Helper):
 
 
 class Key(Helper):
-    def __init__(self, ope):
+    def __init__(self, opens):
         super(Key, self).__init__('Key', 'open')
-        self.ope = ope
+        self.opens = opens
 
     def open(self):
         print('You opened the room.')
+
+class Plush_dog(Helper):
+    def __init__(self, hpt):
+        super(Plush_dog, self).__init__('Plush Dog', 'heal')
+
+    def hpt(self):
+        health =+ 15
+
 
 
 class Room(object):
