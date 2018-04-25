@@ -1,3 +1,4 @@
+import random
 
 # import statements
 # class definitions
@@ -8,6 +9,8 @@
 # - controller
 food = 0
 health = 100
+capacity = 10
+random = random.randint(1, 6)
 
 
 class Item(object):
@@ -40,10 +43,9 @@ class Furniture(Item):
 
 
 class Fridge(Furniture):
-    def __init__(self, opens, take_food):
+    def __init__(self, opens):
         super(Fridge, self).__init__('Fridge', 'opens')
         self.opens = opens
-        self.take_food = take_food
 
     def opens(self):
         print('There are some frozen chicken nuggets.')
@@ -71,6 +73,17 @@ class Knife(Helper):
 
     def pick_up(self):
         print('You picked up the knife')
+        inventory.capacity -= 2
+
+
+class Bp(Helper):
+    def __init__(self, equip):
+        super(Helper, self).__init__('Backpack', 'store')
+        self. capacity = capacity
+
+    def equip(self):
+        print('You have equipped the backpack.')
+        capacity += 15
 
 
 class Key(Helper):
@@ -81,13 +94,54 @@ class Key(Helper):
     def open(self):
         print('You opened the room.')
 
+
 class Plush_dog(Helper):
-    def __init__(self, hpt):
+    def __init__(self, hpt, feed):
         super(Plush_dog, self).__init__('Plush Dog', 'heal')
+        self.feed = feed
+        self.hpt = hpt
+
+    def feed(self):
+        bone -= 1
 
     def hpt(self):
         health =+ 15
 
+
+class Bone(Helper):
+    def __init__(self, give, pickup, drop):
+        super(Bone, self).__init__('Bone', 'feed')
+        self.give = give
+        self.pickup = pickup
+
+    def give(self):
+        print('You fed to the dog.')
+        inventory.capacity += 2
+
+    def pick_up(self):
+        print('You picked up the bone')
+        inventory.capacity -= 2
+
+    def drop(self):
+        print('You dropped the bone.')
+        inventory.capacity += 2
+
+
+class Mug(Helper):
+    def __init__(self, fill, pickup):
+        super(Mug, self).__init__('Mug', 'fill')
+        self.fill = fill
+        self.pickup = pickup
+
+        def fill(self):
+            print('You filled up the mug with coffee.')
+            inventory.capacity -= 1
+
+        def pickup(self):
+            print('You picked up the mug.')
+
+
+while inventory
 
 
 class Room(object):
