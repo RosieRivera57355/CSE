@@ -51,3 +51,9 @@ class Tesla(KeylessCar):
 musk_car = Tesla(2, 400)
 musk_car.turn_on()
 musk_car.fly()
+
+# Character
+
+def take_food(self):
+    print('You have take all of the food in the fridge.')
+    food += 10

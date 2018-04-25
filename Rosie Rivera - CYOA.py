@@ -45,10 +45,6 @@ class Fridge(Furniture):
         self.opens = opens
         self.take_food = take_food
 
-    def take_food(self):
-        print('You have take all of the food in the fridge.')
-        food += 10
-
     def opens(self):
         print('There are some frozen chicken nuggets.')
 
