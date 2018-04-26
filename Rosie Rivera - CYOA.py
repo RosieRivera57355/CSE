@@ -7,6 +7,8 @@ import random
 #     - rooms
 # - instantiation
 # - controller
+
+uses = 5
 food = 0
 health = 100
 capacity = 10
@@ -20,18 +22,17 @@ class Item(object):
 
 
 class House(Item):
-    def __init__(self, name, opens):
-        super(House, self).__init__(name, opens)
-        self.opens = opens
+    def __init__(self, name, use):
+        super(House, self).__init__(name, use)
+
 
     def use(self):
         print('You opened the %s' % self.name)
 
 
 class Window(House):
-    def __init__(self, opens):
+    def __init__(self, name, use):
         super(Window, self).__init__('window', 'open')
-        self.opens = opens
 
     def opens(self):
         print('You opened the window.')
@@ -42,23 +43,33 @@ class Furniture(Item):
         super(Furniture, self).__init__(name, use)
 
 
+class Cupboard(Furniture):
+    def __init(self, name, use):
+        super(Cupboard, self).__init__('Cupboards','open')
+
+
 class Fridge(Furniture):
-    def __init__(self, opens):
+    def __init__(self, name, use):
         super(Fridge, self).__init__('Fridge', 'opens')
-        self.opens = opens
 
     def opens(self):
         print('There are some frozen chicken nuggets.')
 
 
-class Kitchen(Item):
-    def __init__(self, name, use):
-        super(Kitchen, self).__init__(name, use)
-
-
 class Misc(Item):
     def __init__(self, name, use):
         super(Misc, self).__init__(name, use)
+
+
+class Box(Misc):
+    def __init__(self):
+        super(Box, self).__init__('Box', 'open')
+
+    def open(self):
+        print('You have opened the box. There seems to be something inside...')
+
+    def look(self):
+        print('In the box, there is')
 
 
 class Helper(Item):
@@ -67,19 +78,17 @@ class Helper(Item):
 
 
 class Knife(Helper):
-    def __init__(self, pick_up):
+    def __init__(self, name, use):
         super(Knife, self).__init__('Knife', 'cut')
-        self.pick_up = pick_up
 
-    def pick_up(self):
+    def pickup(self):
         print('You picked up the knife')
-        inventory.capacity -= 2
+        capacity -= 2
 
 
 class Bp(Helper):
-    def __init__(self, equip):
+    def __init__(self, name, use):
         super(Helper, self).__init__('Backpack', 'store')
-        self. capacity = capacity
 
     def equip(self):
         print('You have equipped the backpack.')
@@ -87,61 +96,77 @@ class Bp(Helper):
 
 
 class Key(Helper):
-    def __init__(self, opens):
+    def __init__(self, name, use):
         super(Key, self).__init__('Key', 'open')
-        self.opens = opens
 
     def open(self):
         print('You opened the room.')
 
 
-class Plush_dog(Helper):
-    def __init__(self, hpt, feed):
-        super(Plush_dog, self).__init__('Plush Dog', 'heal')
-        self.feed = feed
-        self.hpt = hpt
+class PlushDog(Helper):
+    def __init__(self, name, use):
+        super(PlushDog, self).__init__('Plush Dog', 'heal')
 
     def feed(self):
         bone -= 1
 
-    def hpt(self):
+    def pet(self):
+        print('The doggy is happy! You have gained 15 health. You now have %s uses.' % uses)
+        uses -= 1
         health =+ 15
 
 
 class Bone(Helper):
-    def __init__(self, give, pickup, drop):
+    def __init__(self, name, use):
         super(Bone, self).__init__('Bone', 'feed')
-        self.give = give
-        self.pickup = pickup
 
     def give(self):
         print('You fed to the dog.')
-        inventory.capacity += 2
+        capacity += 2
 
-    def pick_up(self):
+    def pickup(self):
         print('You picked up the bone')
-        inventory.capacity -= 2
+        capacity -= 2
 
     def drop(self):
         print('You dropped the bone.')
-        inventory.capacity += 2
+        capacity += 2
 
 
 class Mug(Helper):
-    def __init__(self, fill, pickup):
+    def __init__(self, name, use):
         super(Mug, self).__init__('Mug', 'fill')
-        self.fill = fill
-        self.pickup = pickup
 
-        def fill(self):
+    def fill(self):
             print('You filled up the mug with coffee.')
-            inventory.capacity -= 1
+            capacity -= 1
 
-        def pickup(self):
+    def pickup(self):
             print('You picked up the mug.')
 
 
+class Phone(Helper):
+    def __init__(self, name, use):
+        super(Phone, self).__init__('Phone', 'use')
+
+    def pickup(self):
+        print('You have picked up the coffee machine.')
+
+    def turn_on(self):
+        print('The phone has turned on.')
+
+
+class Sink(self):
+    def __init__(self):
+        super(Sink, self).__init__('Sink', 'run')
+    def run(self):
+        print('The sink is now running.')
+
+    def turnoff(self):
+        print('The sink is not running.')
+
 while inventory
+
 
 
 class Room(object):
@@ -167,7 +192,6 @@ class Room(object):
 
 directions = ('NORTH', 'SOUTH', 'WEST', 'EAST', 'NORTHWEST', 'NORTHEAST', 'SOUTHWEST', 'SOUTHEAST', 'UP', 'DOWN')
 short_direction = ('N', 'S', 'W', 'E', 'NW', 'NE', 'SW', 'SE', 'U', 'D')
-
 f_gate = Room('Front Gate', None, 'Fence', None, None, None, None, None, None, None, None,
               'The Gate is locked. You must look for another.')
 b_fence = Room('Broken Fence', 'Front Gate', None, None, 'Sewer Lid', None, None, None, None, None, None, 'The fence '
