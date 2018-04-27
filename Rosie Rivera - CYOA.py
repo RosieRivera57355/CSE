@@ -156,14 +156,27 @@ class Phone(Helper):
         print('The phone has turned on.')
 
 
-class Sink(self):
+class Sink(Furniture):
     def __init__(self):
         super(Sink, self).__init__('Sink', 'run')
+
     def run(self):
         print('The sink is now running.')
 
     def turnoff(self):
         print('The sink is not running.')
+
+
+class CoffeeMachine(Helper):
+    def __init__(self):
+        super(CoffeeMachine, self).__init__('Coffee Machine', 'dispense')
+
+    def turnon(self):
+        print('You turned on the coffee machine.')
+
+    def fill(self):
+        print('You have filled the coffee machine up with coffee grounds.')
+
 
 while inventory
 
