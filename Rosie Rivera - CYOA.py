@@ -44,12 +44,16 @@ class Furniture(Item):
 
 
 class Cupboard(Furniture):
-    def __init(self, name, use):
-        super(Cupboard, self).__init__('Cupboards','open')
+    def __init(self):
+        super(Cupboard, self).__init__('Cupboards','opens')
+
+    def opens(self):
+        print('You have opened the cupboard and it seems that there is a shrine. The shrine consists'
+              'of candles, rose petals, and... There seems to be something missing...')
 
 
 class Fridge(Furniture):
-    def __init__(self, name, use):
+    def __init__(self):
         super(Fridge, self).__init__('Fridge', 'opens')
 
     def opens(self):
@@ -57,7 +61,7 @@ class Fridge(Furniture):
 
 
 class Misc(Item):
-    def __init__(self, name, use):
+    def __init__(self):
         super(Misc, self).__init__(name, use)
 
 
@@ -73,12 +77,20 @@ class Box(Misc):
 
 
 class Helper(Item):
-    def __init__(self, name, use):
+    def __init__(self):
         super(Helper, self).__init__(name, use)
 
 
+class CoffeeGrounds(Helper):
+    def __init__(self):
+        super(CoffeeGrounds, self).__init__('Coffee Grounds', 'fill')
+
+    def fill(self):
+        print('You poured the coffee grounds into the coffee machine.')
+
+
 class Knife(Helper):
-    def __init__(self, name, use):
+    def __init__(self):
         super(Knife, self).__init__('Knife', 'cut')
 
     def pickup(self):
@@ -87,7 +99,7 @@ class Knife(Helper):
 
 
 class Bp(Helper):
-    def __init__(self, name, use):
+    def __init__(self):
         super(Helper, self).__init__('Backpack', 'store')
 
     def equip(self):
@@ -96,7 +108,7 @@ class Bp(Helper):
 
 
 class Key(Helper):
-    def __init__(self, name, use):
+    def __init__(self):
         super(Key, self).__init__('Key', 'open')
 
     def open(self):
@@ -104,7 +116,7 @@ class Key(Helper):
 
 
 class PlushDog(Helper):
-    def __init__(self, name, use):
+    def __init__(self):
         super(PlushDog, self).__init__('Plush Dog', 'heal')
 
     def feed(self):
@@ -117,7 +129,7 @@ class PlushDog(Helper):
 
 
 class Bone(Helper):
-    def __init__(self, name, use):
+    def __init__(self):
         super(Bone, self).__init__('Bone', 'feed')
 
     def give(self):
@@ -134,7 +146,7 @@ class Bone(Helper):
 
 
 class Mug(Helper):
-    def __init__(self, name, use):
+    def __init__(self):
         super(Mug, self).__init__('Mug', 'fill')
 
     def fill(self):
@@ -146,7 +158,7 @@ class Mug(Helper):
 
 
 class Phone(Helper):
-    def __init__(self, name, use):
+    def __init__(self):
         super(Phone, self).__init__('Phone', 'use')
 
     def pickup(self):
