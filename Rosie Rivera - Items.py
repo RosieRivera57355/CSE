@@ -1,9 +1,3 @@
-uses = 5
-food = 0
-health = 100
-capacity = 10
-
-
 class Item(object):
     def __init__(self, name, use):
         self.name = name
@@ -11,7 +5,7 @@ class Item(object):
 
 
 class House(Item):
-    def __init__(self):
+    def __init__(self, name, use):
         super(House, self).__init__(name, use)
 
     def use(self):
@@ -22,34 +16,34 @@ class Window(House):
     def __init__(self):
         super(Window, self).__init__('window', 'open')
 
-    def opens(self):
+    def open(self):
         print('You opened the window.')
 
 
 class Furniture(Item):
-    def __init__(self):
+    def __init__(self, name, use):
         super(Furniture, self).__init__(name, use)
 
 
 class Cupboard(Furniture):
     def __init(self):
-        super(Cupboard, self).__init__('Cupboards', 'opens')
+        super(Cupboard, self).__init__('Cupboards', 'open')
 
-    def opens(self):
+    def open(self):
         print('You have opened the cupboard and it seems that there is a shrine of Oprah Winfrey. The shrine consists'
               'of candles, rose petals, and her picture.')
 
 
 class Fridge(Furniture):
-    def __init__(self, name, use):
-        super(Fridge, self).__init__('Fridge', 'opens')
+    def __init__(self):
+        super(Fridge, self).__init__('Fridge', 'open')
 
-    def opens(self):
+    def open(self):
         print('There are some frozen chicken nuggets.')
 
 
 class Misc(Item):
-    def __init__(self):
+    def __init__(self, name, use):
         super(Misc, self).__init__(name, use)
 
 
@@ -65,7 +59,7 @@ class Box(Misc):
 
 
 class Helper(Item):
-    def __init__(self):
+    def __init__(self, name, use):
         super(Helper, self).__init__(name, use)
 
 
@@ -109,7 +103,7 @@ class PlushDog(Helper):
         print('The doggy loves you and will stick by your side forever.')
 
     def pet(self):
-        print('The doggy is happy! You have gained 15 health. You now have %s uses.' % uses)
+        print('The doggy is happy! You have gained 15 health.')
 
 
 class Bone(Helper):

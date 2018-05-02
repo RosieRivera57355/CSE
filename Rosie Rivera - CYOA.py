@@ -31,10 +31,10 @@ class House(Item):
 
 
 class Window(House):
-    def __init__(self, name, use):
+    def __init__(self):
         super(Window, self).__init__('window', 'open')
 
-    def opens(self):
+    def open(self):
         print('You opened the window.')
 
 
@@ -45,9 +45,9 @@ class Furniture(Item):
 
 class Cupboard(Furniture):
     def __init(self):
-        super(Cupboard, self).__init__('Cupboards','opens')
+        super(Cupboard, self).__init__('Cupboards','open')
 
-    def opens(self):
+    def open(self):
         print('You have opened the cupboard and it seems that there is a shrine. The shrine consists'
               'of candles, rose petals, and... There seems to be something missing...')
 
@@ -56,12 +56,12 @@ class Fridge(Furniture):
     def __init__(self):
         super(Fridge, self).__init__('Fridge', 'opens')
 
-    def opens(self):
+    def open(self):
         print('There are some frozen chicken nuggets.')
 
 
 class Misc(Item):
-    def __init__(self):
+    def __init__(self, name, use):
         super(Misc, self).__init__(name, use)
 
 
@@ -77,7 +77,7 @@ class Box(Misc):
 
 
 class Helper(Item):
-    def __init__(self):
+    def __init__(self, name, use):
         super(Helper, self).__init__(name, use)
 
 
@@ -95,7 +95,6 @@ class Knife(Helper):
 
     def pickup(self):
         print('You picked up the knife')
-        capacity -= 2
 
 
 class Bp(Helper):
@@ -104,7 +103,6 @@ class Bp(Helper):
 
     def equip(self):
         print('You have equipped the backpack.')
-        capacity += 15
 
 
 class Key(Helper):
@@ -120,12 +118,10 @@ class PlushDog(Helper):
         super(PlushDog, self).__init__('Plush Dog', 'heal')
 
     def feed(self):
-        bone -= 1
+        print('The doggy loves you and will stick by your side forever.')
 
     def pet(self):
-        print('The doggy is happy! You have gained 15 health. You now have %s uses.' % uses)
-        uses -= 1
-        health =+ 15
+        print('The doggy is happy! You have gained 15 health. You now have %s uses.')
 
 
 class Bone(Helper):
@@ -134,15 +130,12 @@ class Bone(Helper):
 
     def give(self):
         print('You fed to the dog.')
-        capacity += 2
 
     def pickup(self):
         print('You picked up the bone')
-        capacity -= 2
 
     def drop(self):
         print('You dropped the bone.')
-        capacity += 2
 
 
 class Mug(Helper):
@@ -151,7 +144,6 @@ class Mug(Helper):
 
     def fill(self):
             print('You filled up the mug with coffee.')
-            capacity -= 1
 
     def pickup(self):
             print('You picked up the mug.')
@@ -190,13 +182,12 @@ class CoffeeMachine(Helper):
         print('You have filled the coffee machine up with coffee grounds.')
 
 
-while inventory
-
+while health > 0:
 
 
 class Room(object):
     def __init__(self, name, north, south, west, east, northwest, northeast, southwest, southeast, up, down,
-                 description):
+                     description):
         self.name = name
         self.north = north
         self.south = south
