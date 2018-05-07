@@ -19,11 +19,11 @@ class Room(object):
         current_node = globals()[getattr(self, direction)]
 
 
-directions = ('NORTH', 'SOUTH', 'WEST', 'EAST', 'NORTHWEST', 'NORTHEAST', 'SOUTHWEST', 'SOUTHEAST', 'UP', 'DOWN')
-short_direction = ('N', 'S', 'W', 'E', 'NW', 'NE', 'SW', 'SE', 'U', 'D')
+directions = ['north', 'south', 'west', 'east', 'northwest', 'northeast', 'southwest', 'southeast', 'up', 'down']
+short_direction = ['n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'u', 'd']
 
 f_gate = Room('Front Gate', None, 'Fence', None, None, None, None, None, None, None, None,
-              'The Gate is locked. You must look for another.')
+              'The Gate is locked. You must look for another way.')
 b_fence = Room('Broken Fence', 'Front Gate', None, None, 'Sewer Lid', None, None, None, None, None, None, 'The fence '
                                                                                                           'is loose.')
 garden = Room('Garden', 'South of House', None, None, None, None, 'Shed', None, None, 'Back Fence',
@@ -58,7 +58,7 @@ current_node = f_gate
 while True:
     print(current_node.name)
     print(current_node.description)
-    command = input('>_').upper().strip()
+    command = input('>_').lower().strip()
     if command == 'quit':
         quit(0)
     elif command in short_direction:

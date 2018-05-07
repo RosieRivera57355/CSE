@@ -76,6 +76,14 @@ class Box(Misc):
         print('In the box, there is')
 
 
+class Flowerbed(Misc):
+    def __init__(self):
+        super(Flowerbed, self).__init__('Flowerbed', 'search')
+
+    def search(self):
+        print('There is a key in the bush!')
+
+
 class Helper(Item):
     def __init__(self, name, use):
         super(Helper, self).__init__(name, use)
@@ -187,7 +195,7 @@ while health > 0:
 
 class Room(object):
     def __init__(self, name, north, south, west, east, northwest, northeast, southwest, southeast, up, down,
-                     description):
+                 description, item = None, thing = None, oitem = None):
         self.name = name
         self.north = north
         self.south = south
@@ -200,18 +208,22 @@ class Room(object):
         self.up = up
         self.down = down
         self.description = description
+        self.item = item
+        self.thing = thing
+        self.oitem = oitem
 
     def move(self, direction):
         global current_node
         current_node = globals()[getattr(self, direction)]
 
 
-directions = ('NORTH', 'SOUTH', 'WEST', 'EAST', 'NORTHWEST', 'NORTHEAST', 'SOUTHWEST', 'SOUTHEAST', 'UP', 'DOWN')
-short_direction = ('N', 'S', 'W', 'E', 'NW', 'NE', 'SW', 'SE', 'U', 'D')
+directions = ['north', 'south', 'west', 'east', 'northwest', 'northeast', 'southwest', 'southeast', 'up', 'down']
+short_direction = ['n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'u', 'd']
+
 f_gate = Room('Front Gate', None, 'Fence', None, None, None, None, None, None, None, None,
-              'The Gate is locked. You must look for another.')
+              'The Gate is locked. You must look for another way.', None)
 b_fence = Room('Broken Fence', 'Front Gate', None, None, 'Sewer Lid', None, None, None, None, None, None, 'The fence '
-                                                                                                          'is loose.')
+                                                                                                  'is loose.', 'Fence')
 garden = Room('Garden', 'South of House', None, None, None, None, 'Shed', None, None, 'Back Fence',
               None, 'There is a path leading Northeast somewhere and there is a broken fence south of here.')
 s_house = Room('South of House', 'Living Room', 'Garden', 'West of House', 'East of House', None, None, None, None,
@@ -244,7 +256,7 @@ current_node = f_gate
 while True:
     print(current_node.name)
     print(current_node.description)
-    command = input('>_').upper().strip()
+    command = input('>_').lower().strip()
     if command == 'quit':
         quit(0)
     elif command in short_direction:
