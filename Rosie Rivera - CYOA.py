@@ -190,12 +190,9 @@ class CoffeeMachine(Helper):
         print('You have filled the coffee machine up with coffee grounds.')
 
 
-while health > 0:
-
-
 class Room(object):
     def __init__(self, name, north, south, west, east, northwest, northeast, southwest, southeast, up, down,
-                 description, item = None, thing = None, oitem = None):
+                 description, item=None, item2=None, item3=None):
         self.name = name
         self.north = north
         self.south = south
@@ -209,8 +206,8 @@ class Room(object):
         self.down = down
         self.description = description
         self.item = item
-        self.thing = thing
-        self.oitem = oitem
+        self.item2 = item2
+        self.item3 = item3
 
     def move(self, direction):
         global current_node
@@ -220,13 +217,13 @@ class Room(object):
 directions = ['north', 'south', 'west', 'east', 'northwest', 'northeast', 'southwest', 'southeast', 'up', 'down']
 short_direction = ['n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'u', 'd']
 
-f_gate = Room('Front Gate', None, 'Fence', None, None, None, None, None, None, None, None,
+f_gate = Room('Front Gate', None, 'b_fence', None, None, None, None, None, None, None, None,
               'The Gate is locked. You must look for another way.', None)
-b_fence = Room('Broken Fence', 'Front Gate', None, None, 'Sewer Lid', None, None, None, None, None, None, 'The fence '
-                                                                                                  'is loose.', 'Fence')
-garden = Room('Garden', 'South of House', None, None, None, None, 'Shed', None, None, 'Back Fence',
+b_fence = Room('Broken Fence', 'f_gate', None, None, None, None, None, None, None, None, None,
+               'The fence is loose.', 'Fence', None, None)
+garden = Room('Garden', 's_house', None, None, None, None, 'shed', None, None, 'b_fence',
               None, 'There is a path leading Northeast somewhere and there is a broken fence south of here.')
-s_house = Room('South of House', 'Living Room', 'Garden', 'West of House', 'East of House', None, None, None, None,
+s_house = Room('South of House', 'l_room', 'garden', 'w_house', 'East of House', None, None, None, None,
                None, None, 'There is a window that is partly open. There seems to be something shining inside')
 l_room = Room('Living Room', None, 'South of House', None, None, None, None, None, None, 'Up Stairs',
               'Down Stairs', 'There seems to be an upstairs and downstairs and not much else...You should look around.')
