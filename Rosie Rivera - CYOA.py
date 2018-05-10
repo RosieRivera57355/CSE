@@ -37,6 +37,13 @@ class Window(House):
     def open(self):
         print('You opened the window.')
 
+class Fence(House):
+    def __init__(self):
+        super(Fence, self).__init__('fence', 'open')
+
+    def open(self):
+        print('You opened the fence.')
+
 
 class Furniture(Item):
     def __init__(self, name, use):
