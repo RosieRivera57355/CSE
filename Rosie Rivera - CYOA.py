@@ -1,4 +1,5 @@
 import random
+import webbrowser
 
 # import statements
 # class definitions
@@ -226,7 +227,7 @@ short_direction = ['n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'u', 'd']
 
 f_gate = Room('Front Gate', None, 'b_fence', None, None, None, None, None, None, None, None,
               'The Gate is locked. You must look for another way.', None)
-b_fence = Room('Broken Fence', 'f_gate', None, None, None, None, None, None, None, None, None,
+b_fence = Room('Broken Fence', 'f_gate', None, 'garden', None, None, None, None, None, None, None,
                'The fence is loose.', 'Fence', None, None)
 garden = Room('Garden', 's_house', None, None, None, None, 'shed', None, None, 'b_fence',
               None, 'There is a path leading Northeast somewhere and there is a broken fence south of here.')
@@ -272,5 +273,7 @@ while True:
             current_node.move(command)
         except KeyError:
             print("You cannot go that way.")
+    elif command == 'test this':
+        webbrowser.open_new("https://www.youtube.com/watch?v=ru0K8uYEZWw")
     else:
         print("Command not Found")
