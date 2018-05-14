@@ -221,23 +221,29 @@ class Room(object):
         global current_node
         current_node = globals()[getattr(self, direction)]
 
+mug = Mug()
+sink = Sink()
+
+
 
 directions = ['north', 'south', 'west', 'east', 'northwest', 'northeast', 'southwest', 'southeast', 'up', 'down']
 short_direction = ['n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'u', 'd']
 
-f_gate = Room('Front Gate', None, 'b_fence', None, None, None, None, None, None, None, None,
-              'The Gate is locked. You must look for another way.', None)
-b_fence = Room('Broken Fence', 'f_gate', None, 'garden', None, None, None, None, None, None, None,
-               'The fence is loose.', 'Fence', None, None)
-garden = Room('Garden', 's_house', None, None, None, None, 'shed', None, None, 'b_fence',
-              None, 'There is a path leading Northeast somewhere and there is a broken fence south of here.')
+f_gate = Room('Front Gate', None, None, None, 'b_fence', None, None, None, None, None, None,
+              'The Gate is locked. You must look for another way.', None, None, None)
+b_fence = Room('Broken Fence', 'garden', None, 'f_gate', None, None, None, None, None, None, None,
+               'The fence is loose. Maybe you can break in.', 'Fence', None, None)
+garden = Room('Garden', 's_house', 'b_fence', None, None, None, 'shed', None, None, None,
+              None, 'There is a path leading Northeast somewhere and there is a broken fence south of here.',
+              'Flowerbed', None, None)
 s_house = Room('South of House', 'l_room', 'garden', 'w_house', 'e_house', None, None, None, None,
                None, None, 'There is a window that is partly open. There seems to be something shining inside')
 l_room = Room('Living Room', None, 's_house', None, None, None, None, None, None, 'u_stairs',
-              'd_stairs', 'There seems to be an upstairs and downstairs and not much else...You should look around.')
+              'd_stairs', 'It seems to be a regular lving room, and there is a mug that is just sitting there.'
+                          'There is a staircase that leads upstairs and downstairs.', 'mug', None, None)
 k_room = Room('Kitchen', None, None, 'l_room', None, None, None, None, None, None, None,
-              'There is a fridge, an island, and cupboards.'
-              '\n There is a knife on a cutting board, a sink, a coffee machine, coffee grounds, and a mug')
+              'There is a fridge, an island, and cupboards.There is a knife on a cutting board, a sink,'
+              'a coffee machine, coffee grounds, and a mug', 'coffee machine', 'coffee grounds', 'sink')
 up_stairs = Room('Up Stairs', None, None, 'jt_room', 'g_room', None, None, None, None,
                  None, 'l_room', 'There is a room WEST \n'
                                  'of here and a room EAST of here. There is a mirror and a vase that has some flowers')
@@ -256,7 +262,7 @@ shed = Room('Shed', 'y_back', 'garden', None, None, None, None, None, None, None
             'There are two paths one goes Southwest and one goes north. Inside there is a picture.')
 d_stairs = Room('Down Stairs', None, None, None, None, None, None, None, None, 'l_room', None,
                 'It is dark and there is a room with a whole bunch of junk.')
-g_room = Room('Guest Room', 'w_house', None, None, None, None, 'l_room', None, 's_house', None, None, 'There is')
+g_room = Room('Guest Room', 'w_house', None, None, None, None, 'l_room', None, 's_house', None, None, 'There is a trophy in the trash can ')
 current_node = f_gate
 
 while True:
