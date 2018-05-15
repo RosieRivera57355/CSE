@@ -221,9 +221,9 @@ class Room(object):
         global current_node
         current_node = globals()[getattr(self, direction)]
 
+
 mug = Mug()
 sink = Sink()
-
 
 
 directions = ['north', 'south', 'west', 'east', 'northwest', 'northeast', 'southwest', 'southeast', 'up', 'down']
@@ -245,8 +245,8 @@ k_room = Room('Kitchen', None, None, 'l_room', None, None, None, None, None, Non
               'There is a fridge, an island, and cupboards.There is a knife on a cutting board, a sink,'
               'a coffee machine, coffee grounds, and a mug', 'coffee machine', 'coffee grounds', 'sink')
 up_stairs = Room('Up Stairs', None, None, 'jt_room', 'g_room', None, None, None, None,
-                 None, 'l_room', 'There is a room WEST \n'
-                                 'of here and a room EAST of here. There is a mirror and a vase that has some flowers')
+                 None, 'l_room', 'There is a room WEST \n of here and a room EAST of here. There is a mirror and a vase'
+                                 'that has some flowers')
 jt_room = Room('Justin Timberlakes Room', None, None, None, 'u_stairs', None, None, None, None, None, None,
                'There is a phone on the bedside table. There is also a TV, bed, and a drawer.')
 parking_lot = Room('Parking Lot', 'garage', 'l_room', None, None, None, None, None, None, None, None,
@@ -262,7 +262,8 @@ shed = Room('Shed', 'y_back', 'garden', None, None, None, None, None, None, None
             'There are two paths one goes Southwest and one goes north. Inside there is a picture.')
 d_stairs = Room('Down Stairs', None, None, None, None, None, None, None, None, 'l_room', None,
                 'It is dark and there is a room with a whole bunch of junk.')
-g_room = Room('Guest Room', 'w_house', None, None, None, None, 'l_room', None, 's_house', None, None, 'There is a trophy in the trash can ')
+g_room = Room('Guest Room', 'w_house', None, None, None, None, 'l_room', None, 's_house', None, None,
+              'There is a trophy in the trash can', 'trophy', )
 current_node = f_gate
 
 while True:
