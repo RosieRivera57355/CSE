@@ -18,9 +18,6 @@ class Character(object):
         self.health = 100
         self.capacity = 10
 
-    def enemy(self):
-        self.enemy = 'Window'
-
     def capacity(self):
         self.capacity = 10
 

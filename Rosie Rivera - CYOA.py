@@ -17,14 +17,15 @@ random = random.randint(1, 6)
 
 
 class Item(object):
-    def __init__(self, name, use):
+    def __init__(self, name, action, use):
         self.name = name
         self.use = use
+        self.action = action
 
 
 class House(Item):
-    def __init__(self, name, use):
-        super(House, self).__init__(name, use)
+    def __init__(self, name, action, use):
+        super(House, self).__init__(name, action, use)
 
 
     def use(self):
@@ -32,28 +33,29 @@ class House(Item):
 
 
 class Window(House):
-    def __init__(self):
-        super(Window, self).__init__('window', 'open')
+    def __init__(self, name, action, use):
+        super(Window, self).__init__(name, action, use)
 
     def open(self):
         print('You opened the window.')
 
+
 class Fence(House):
-    def __init__(self):
-        super(Fence, self).__init__('fence', 'open')
+    def __init__(self, name, action, use):
+        super(Fence, self).__init__(name, action, use)
 
     def open(self):
         print('You opened the fence.')
 
 
 class Furniture(Item):
-    def __init__(self, name, use):
-        super(Furniture, self).__init__(name, use)
+    def __init__(self, name, action, use):
+        super(Furniture, self).__init__(name, action, use)
 
 
 class Cupboard(Furniture):
-    def __init(self):
-        super(Cupboard, self).__init__('Cupboards','open')
+    def __init(self, name, action, use):
+        super(Cupboard, self).__init__(name, action, use)
 
     def open(self):
         print('You have opened the cupboard and it seems that there is a shrine. The shrine consists'
@@ -61,21 +63,21 @@ class Cupboard(Furniture):
 
 
 class Fridge(Furniture):
-    def __init__(self):
-        super(Fridge, self).__init__('Fridge', 'opens')
+    def __init__(self, name, action, use):
+        super(Fridge, self).__init__(name, action, use)
 
     def open(self):
         print('There are some frozen chicken nuggets.')
 
 
 class Misc(Item):
-    def __init__(self, name, use):
-        super(Misc, self).__init__(name, use)
+    def __init__(self, name, action, use):
+        super(Misc, self).__init__(name, action, use)
 
 
 class Box(Misc):
-    def __init__(self):
-        super(Box, self).__init__('Box', 'open')
+    def __init__(self, name, action, use):
+        super(Box, self).__init__(name, action, use)
 
     def open(self):
         print('You have opened the box. There seems to be something inside...')
@@ -85,53 +87,53 @@ class Box(Misc):
 
 
 class Flowerbed(Misc):
-    def __init__(self):
-        super(Flowerbed, self).__init__('Flowerbed', 'search')
+    def __init__(self, name, action, use):
+        super(Flowerbed, self).__init__(name, action, use)
 
     def search(self):
         print('There is a key in the bush!')
 
 
 class Helper(Item):
-    def __init__(self, name, use):
-        super(Helper, self).__init__(name, use)
+    def __init__(self, name, action, use):
+        super(Helper, self).__init__(name, action, use)
 
 
 class CoffeeGrounds(Helper):
-    def __init__(self):
-        super(CoffeeGrounds, self).__init__('Coffee Grounds', 'fill')
+    def __init__(self, name, action, use):
+        super(CoffeeGrounds, self).__init__(name, action, use)
 
     def fill(self):
         print('You poured the coffee grounds into the coffee machine.')
 
 
 class Knife(Helper):
-    def __init__(self):
-        super(Knife, self).__init__('Knife', 'cut')
+    def __init__(self, name, action, use):
+        super(Knife, self).__init__(name, action, use)
 
     def pickup(self):
         print('You picked up the knife')
 
 
 class Bp(Helper):
-    def __init__(self):
-        super(Helper, self).__init__('Backpack', 'store')
+    def __init__(self, name, action, use):
+        super(Helper, self).__init__(name, action, use)
 
     def equip(self):
         print('You have equipped the backpack.')
 
 
 class Key(Helper):
-    def __init__(self):
-        super(Key, self).__init__('Key', 'open')
+    def __init__(self, name, action, use):
+        super(Key, self).__init__(name, action, use)
 
     def open(self):
         print('You opened the room.')
 
 
 class PlushDog(Helper):
-    def __init__(self):
-        super(PlushDog, self).__init__('Plush Dog', 'heal')
+    def __init__(self, name, action, use):
+        super(PlushDog, self).__init__(name, action, use)
 
     def feed(self):
         print('The doggy loves you and will stick by your side forever.')
@@ -141,8 +143,8 @@ class PlushDog(Helper):
 
 
 class Bone(Helper):
-    def __init__(self):
-        super(Bone, self).__init__('Bone', 'feed')
+    def __init__(self, name, action, use):
+        super(Bone, self).__init__(name, action, use)
 
     def give(self):
         print('You fed to the dog.')
@@ -155,8 +157,8 @@ class Bone(Helper):
 
 
 class Mug(Helper):
-    def __init__(self):
-        super(Mug, self).__init__('Mug', 'fill')
+    def __init__(self, name, action, use):
+        super(Mug, self).__init__(name, action, use)
 
     def fill(self):
             print('You filled up the mug with coffee.')
@@ -166,8 +168,8 @@ class Mug(Helper):
 
 
 class Phone(Helper):
-    def __init__(self):
-        super(Phone, self).__init__('Phone', 'use')
+    def __init__(self, name, action, use):
+        super(Phone, self).__init__(name, action, use)
 
     def pickup(self):
         print('You have picked up the coffee machine.')
@@ -177,8 +179,8 @@ class Phone(Helper):
 
 
 class Sink(Furniture):
-    def __init__(self):
-        super(Sink, self).__init__('Sink', 'run')
+    def __init__(self, name, action, use):
+        super(Sink, self).__init__(name, action, use)
 
     def run(self):
         print('The sink is now running.')
@@ -188,8 +190,8 @@ class Sink(Furniture):
 
 
 class CoffeeMachine(Helper):
-    def __init__(self):
-        super(CoffeeMachine, self).__init__('Coffee Machine', 'dispense')
+    def __init__(self, name, action, use):
+        super(CoffeeMachine, self).__init__(name, action, use)
 
     def turnon(self):
         print('You turned on the coffee machine.')
@@ -222,8 +224,9 @@ class Room(object):
         current_node = globals()[getattr(self, direction)]
 
 
-mug = Mug()
-sink = Sink()
+window = Window('Window', None, 'open')
+mug = Mug('Mug', 'grab mug', 'fill')
+sink = Sink('Sink', None, 'turn on')
 
 
 directions = ['north', 'south', 'west', 'east', 'northwest', 'northeast', 'southwest', 'southeast', 'up', 'down']
@@ -238,7 +241,7 @@ garden = Room('Garden', 's_house', 'b_fence', None, None, None, 'shed', None, No
               'Flowerbed', None, None)
 s_house = Room('South of House', 'l_room', 'garden', 'w_house', 'e_house', None, None, None, None,
                None, None, 'There is a window that is partly open. There seems to be something shining inside')
-l_room = Room('Living Room', None, 's_house', None, None, None, None, None, None, 'u_stairs',
+l_room = Room('Living Room', None, 's_house', None, 'k_room', None, None, None, None, 'u_stairs',
               'd_stairs', 'It seems to be a regular lving room, and there is a mug that is just sitting there.'
                           'There is a staircase that leads upstairs and downstairs.', 'mug', None, None)
 k_room = Room('Kitchen', None, None, 'l_room', None, None, None, None, None, None, None,
