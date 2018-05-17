@@ -225,6 +225,13 @@ class Room(object):
 
 
 window = Window('Window', None, 'open')
+fence = Fence('Fence', None, 'open')
+cupboard = Cupboard('Cupboard', None, 'open')
+fridge = Fridge('Fridge', None, 'open')
+box = Box('Box', None, 'open')
+flowerbed = Flowerbed('Flowerbed', None, 'search')
+coffeegrounds = CoffeeGrounds('Coffee grounds', 'pickup', 'pour grounds')
+knife = Knife('Knife', 'pickup', 'equip backpack')
 mug = Mug('Mug', 'grab mug', 'fill')
 sink = Sink('Sink', None, 'turn on')
 
@@ -234,7 +241,7 @@ short_direction = ['n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'u', 'd']
 
 f_gate = Room('Front Gate', None, None, None, 'b_fence', None, None, None, None, None, None,
               'The Gate is locked. You must look for another way.', None, None, None)
-b_fence = Room('Broken Fence', 'garden', None, 'f_gate', None, None, None, None, None, None, None,
+b_fence = Room('Broken Fence', None, None, 'f_gate', None, None, None, None, None, None, None,
                'The fence is loose. Maybe you can break in.', 'Fence', None, None)
 garden = Room('Garden', 's_house', 'b_fence', None, None, None, 'shed', None, None, None,
               None, 'There is a path leading Northeast somewhere and there is a broken fence south of here.',
@@ -285,5 +292,8 @@ while True:
             print("You cannot go that way.")
     elif command == 'test this':
         webbrowser.open_new("https://www.youtube.com/watch?v=ru0K8uYEZWw")
+    elif command == 'break fence' and current_node == b_fence:
+        b_fence.north = 'garden'
+        print("SMASH!!!!!")
     else:
         print("Command not Found")
