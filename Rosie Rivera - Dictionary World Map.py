@@ -116,6 +116,7 @@ world_map = {
             'UP': 'L-ROOM'
         }
     }
+}
 current_node = world_map
 directions = ['north', 'south', 'east', 'west', 'northeast', 'northwest', 'southeast', 'southwest', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'ne', 'nw', 'se', 'sw', 'u', 'd']
