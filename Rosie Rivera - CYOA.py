@@ -27,7 +27,6 @@ class House(Item):
     def __init__(self, name, action, use):
         super(House, self).__init__(name, action, use)
 
-
     def use(self):
         print('You opened the %s' % self.name)
 
@@ -233,8 +232,9 @@ flowerbed = Flowerbed('Flowerbed', None, 'search')
 coffeegrounds = CoffeeGrounds('Coffee grounds', 'pickup', 'pour grounds')
 knife = Knife('Knife', 'pickup', 'equip backpack')
 mug = Mug('Mug', 'grab mug', 'fill')
+phone = Phone('Phone', 'pickup', 'take a picture')
 sink = Sink('Sink', None, 'turn on')
-
+coffeemachine = CoffeeMachine('Coffee Machine', None, 'turn on')
 
 directions = ['north', 'south', 'west', 'east', 'northwest', 'northeast', 'southwest', 'southeast', 'up', 'down']
 short_direction = ['n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'u', 'd']
