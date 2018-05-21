@@ -8,9 +8,6 @@ import webbrowser
 #     - rooms
 # - instantiation
 # - controller
-
-uses = 5
-food = 0
 health = 100
 capacity = 10
 random = random.randint(1, 6)
@@ -188,12 +185,12 @@ class Sink(Furniture):
         print('The sink is not running.')
 
 
-class CoffeeMachine(Helper):
+class FryingPan(Helper):
     def __init__(self, name, action, use):
-        super(CoffeeMachine, self).__init__(name, action, use)
+        super(FryingPan, self).__init__(name, action, use)
 
-    def turnon(self):
-        print('You turned on the coffee machine.')
+    def pickup(self):
+        print('You picked up a frying pan.')
 
     def fill(self):
         print('You have filled the coffee machine up with coffee grounds.')
@@ -230,11 +227,35 @@ fridge = Fridge('Fridge', None, 'open')
 box = Box('Box', None, 'open')
 flowerbed = Flowerbed('Flowerbed', None, 'search')
 coffeegrounds = CoffeeGrounds('Coffee grounds', 'pickup', 'pour grounds')
-knife = Knife('Knife', 'pickup', 'equip backpack')
-mug = Mug('Mug', 'grab mug', 'fill')
+knife = Knife('Knife', 'pickup', 'threaten')
+bp = Bp('Backpack', 'pickup', 'equip backpack')
+key = Key('Key', 'pickup', 'use')
+plushdog = PlushDog('Plush Dog', None, 'pickup')
+bone = Bone('Bone', 'pickup', 'give')
 phone = Phone('Phone', 'pickup', 'take a picture')
-sink = Sink('Sink', None, 'turn on')
-coffeemachine = CoffeeMachine('Coffee Machine', None, 'turn on')
+
+
+class Character(object):
+    def __init__(self, name, description, capacity, interact, look, health, inventory):
+        self.name = name
+        self.description = description
+        self.capacity = capacity
+        self.interact = interact
+        self.look = look
+        self.health = health
+        self.inventory = inventory
+
+    def description(self):
+        self.name = 'Billy'
+        self.description = 'Billy works for the local news station. He is very athletic and will do anything to keep'
+        'his job...ANYTHING.'
+
+
+    def capacity(self):
+        self.capacity = 10
+
+
+billy = Character("Billy", "A generic middle aged man.", 10, None, None, 100, [])
 
 directions = ['north', 'south', 'west', 'east', 'northwest', 'northeast', 'southwest', 'southeast', 'up', 'down']
 short_direction = ['n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'u', 'd']
@@ -246,17 +267,17 @@ b_fence = Room('Broken Fence', None, None, 'f_gate', None, None, None, None, Non
 garden = Room('Garden', 's_house', 'b_fence', None, None, None, 'shed', None, None, None,
               None, 'There is a path leading Northeast somewhere and there is a broken fence south of here.',
               'Flowerbed', None, None)
-s_house = Room('South of House', 'l_room', 'garden', 'w_house', 'e_house', None, None, None, None,
+s_house = Room('South of House', None, 'garden', 'w_house', 'e_house', None, None, None, None,
                None, None, 'There is a window that is partly open. There seems to be something shining inside')
-l_room = Room('Living Room', None, 's_house', None, 'k_room', None, None, None, None, 'u_stairs',
+l_room = Room('Living Room', None, 's_house', None, 'k_room', None, None, None, None, 'up_stairs',
               'd_stairs', 'It seems to be a regular lving room, and there is a mug that is just sitting there.'
                           'There is a staircase that leads upstairs and downstairs.', 'mug', None, None)
 k_room = Room('Kitchen', None, None, 'l_room', None, None, None, None, None, None, None,
               'There is a fridge, an island, and cupboards.There is a knife on a cutting board, a sink,'
               'a coffee machine, coffee grounds, and a mug', 'coffee machine', 'coffee grounds', 'sink')
-up_stairs = Room('Up Stairs', None, None, 'jt_room', 'g_room', None, None, None, None,
+up_stairs = Room('Up Stairs', None, None, None, 'g_room', None, None, None, None,
                  None, 'l_room', 'There is a room WEST \n of here and a room EAST of here. There is a mirror and a vase'
-                                 'that has some flowers')
+                                 ' that has some flowers')
 jt_room = Room('Justin Timberlakes Room', None, None, None, 'u_stairs', None, None, None, None, None, None,
                'There is a phone on the bedside table. There is also a TV, bed, and a drawer.')
 parking_lot = Room('Parking Lot', 'garage', 'l_room', None, None, None, None, None, None, None, None,
@@ -268,7 +289,7 @@ d_room = Room('Dog Room', None, 'd_house', None, None, None, None, None, None, N
               'close enough to it to see what is on its collar.')
 y_back = Room('Back Yard', None, 'shed', 'k_room', None, None, None, None, None, None, None,
               'There is a shed south of here. There could be something useful in there.')
-shed = Room('Shed', 'y_back', 'garden', None, None, None, None, None, None, None, None,
+shed = Room('Shed', 'y_back', None, None, None, None, 'garden', None, None, None, None,
             'There are two paths one goes Southwest and one goes north. Inside there is a picture.')
 d_stairs = Room('Down Stairs', None, None, None, None, None, None, None, None, 'l_room', None,
                 'It is dark and there is a room with a whole bunch of junk.')
@@ -292,6 +313,17 @@ while True:
             print("You cannot go that way.")
     elif command == 'test this':
         webbrowser.open_new("https://www.youtube.com/watch?v=ru0K8uYEZWw")
+    elif command == 'unlock room' and current_node == up_stairs:
+        billy.inventory = [Key]
+        if Key in billy.inventory:
+            print("You opened the door.")
+            up_stairs.west = 'jt_room'
+        else:
+            print("You do not have the key.")
+
+    elif command == 'open window' and current_node == s_house:
+        s_house.north = 'l_room'
+        print('WOOOOOOSH!')
     elif command == 'break fence' and current_node == b_fence:
         b_fence.north = 'garden'
         print("SMASH!!!!!")
