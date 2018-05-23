@@ -1,22 +1,17 @@
 class Room(object):
-<<<<<<< HEAD
     def __int__(self, name, north, south, west, east, northeast, northwest, southeast, southwest, up, down, description):
-=======
+
     def __init__(self, name, north, south, west, east, northwest, northeast, southwest, southeast, up, down,
                  description):
->>>>>>> 44942d0c4cca43cbf9e01c8f63a9b74d58226f78
         self.name = name
         self.north = north
         self.south = south
         self.west = west
         self.east = east
-<<<<<<< HEAD
-=======
         self.northwest = northwest
         self.northeast = northeast
         self.southwest = southwest
         self.southeast = southeast
->>>>>>> 44942d0c4cca43cbf9e01c8f63a9b74d58226f78
         self.up = up
         self.down = down
         self.description = description
@@ -26,10 +21,9 @@ class Room(object):
         current_node = globals()[getattr(self, direction)]
 
 
-<<<<<<< HEAD
 F_GATE = Room('West of House', 'north_house')
 west_house = Room('North of House', None)
-=======
+
 directions = ['north', 'south', 'west', 'east', 'northwest', 'northeast', 'southwest', 'southeast', 'up', 'down']
 short_direction = ['n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'u', 'd']
 
@@ -82,4 +76,3 @@ while True:
             print("You cannot go that way.")
     else:
         print("Command not Found")
->>>>>>> 44942d0c4cca43cbf9e01c8f63a9b74d58226f78
