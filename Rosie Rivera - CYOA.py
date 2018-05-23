@@ -63,7 +63,7 @@ class Fridge(Furniture):
         super(Fridge, self).__init__(name, action, use)
 
     def open(self):
-        print('There are some frozen chicken nuggets.')
+        print('There .')
 
 
 class Misc(Item):
@@ -250,12 +250,11 @@ class Character(object):
         self.description = 'Billy works for the local news station. He is very athletic and will do anything to keep'
         'his job...ANYTHING.'
 
-
     def capacity(self):
         self.capacity = 10
 
 
-billy = Character("Billy", "A generic middle aged man.", 10, None, None, 100, [])
+joe = Character("Joe", "A generic middle aged man.", 10, None, None, 100, [])
 
 directions = ['north', 'south', 'west', 'east', 'northwest', 'northeast', 'southwest', 'southeast', 'up', 'down']
 short_direction = ['n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'u', 'd']
@@ -278,6 +277,8 @@ k_room = Room('Kitchen', None, None, 'l_room', None, None, None, None, None, Non
 up_stairs = Room('Up Stairs', None, None, None, 'g_room', None, None, None, None,
                  None, 'l_room', 'There is a room WEST \n of here and a room EAST of here. There is a mirror and a vase'
                                  ' that has some flowers')
+theater = Room('Theater', None, None, 'd_stairs', None, None, None, None, None, None, None,
+               'In the theater you see the new Justin Timberlake movie playing')
 jt_room = Room('Justin Timberlakes Room', None, None, None, 'u_stairs', None, None, None, None, None, None,
                'There is a phone on the bedside table. There is also a TV, bed, and a drawer.')
 parking_lot = Room('Parking Lot', 'garage', 'l_room', None, None, None, None, None, None, None, None,
@@ -291,8 +292,8 @@ y_back = Room('Back Yard', None, 'shed', 'k_room', None, None, None, None, None,
               'There is a shed south of here. There could be something useful in there.')
 shed = Room('Shed', 'y_back', None, None, None, None, 'garden', None, None, None, None,
             'There are two paths one goes Southwest and one goes north. Inside there is a picture.')
-d_stairs = Room('Down Stairs', None, None, None, None, None, None, None, None, 'l_room', None,
-                'It is dark and there is a room with a whole bunch of junk.')
+d_stairs = Room('Bowling Alley', None, None, None, None, None, None, None, None, 'l_room', None,
+                'There is a Bowling Alley down here and there is.')
 g_room = Room('Guest Room', 'w_house', None, None, None, None, 'l_room', None, 's_house', None, None,
               'There is a trophy in the trash can', 'trophy', )
 current_node = f_gate
@@ -314,8 +315,8 @@ while True:
     elif command == 'test this':
         webbrowser.open_new("https://www.youtube.com/watch?v=ru0K8uYEZWw")
     elif command == 'unlock room' and current_node == up_stairs:
-        billy.inventory = [Key]
-        if Key in billy.inventory:
+        joe.inventory = []
+        if Key in joe.inventory:
             print("You opened the door.")
             up_stairs.west = 'jt_room'
         else:
