@@ -107,7 +107,7 @@ class Knife(Helper):
     def __init__(self, name, action, use):
         super(Knife, self).__init__(name, action, use)
 
-    def pickup(self):
+    def pickup_knife(self):
         print('You picked up the knife')
 
 
@@ -131,11 +131,8 @@ class PlushDog(Helper):
     def __init__(self, name, action, use):
         super(PlushDog, self).__init__(name, action, use)
 
-    def feed(self):
-        print('The doggy loves you and will stick by your side forever.')
-
-    def pet(self):
-        print('The doggy is happy! You have gained 15 health. You now have %s uses.')
+    def feed_bone(self):
+        print('The doggy is happy and will now let you pick it up.')
 
 
 class Bone(Helper):
@@ -227,34 +224,31 @@ fridge = Fridge('Fridge', None, 'open')
 box = Box('Box', None, 'open')
 flowerbed = Flowerbed('Flowerbed', None, 'search')
 coffeegrounds = CoffeeGrounds('Coffee grounds', 'pickup', 'pour grounds')
-knife = Knife('Knife', 'pickup', 'threaten')
-bp = Bp('Backpack', 'pickup', 'equip backpack')
-key = Key('Key', 'pickup', 'use')
-plushdog = PlushDog('Plush Dog', None, 'pickup')
-bone = Bone('Bone', 'pickup', 'give')
+knife = Knife('Knife', 'pickup knife', 'threaten')
+bp = Bp('Backpack', 'pickup knife', 'equip backpack')
+key = Key('Key', 'pickup knife', 'use')
+plushdog = PlushDog('Plush Dog', None, None)
+bone = Bone('Bone', 'pickup knife', 'give')
 phone = Phone('Phone', 'pickup', 'take a picture')
 
 
 class Character(object):
-    def __init__(self, name, description, capacity, interact, look, health, inventory):
+    def __init__(self, name, description, capacity, inventory):
         self.name = name
         self.description = description
         self.capacity = capacity
-        self.interact = interact
-        self.look = look
-        self.health = health
         self.inventory = inventory
 
     def description(self):
-        self.name = 'Billy'
-        self.description = 'Billy works for the local news station. He is very athletic and will do anything to keep'
+        self.name = 'Joe'
+        self.description = 'Joe works for the local news station. He is very athletic and will do anything to keep'
         'his job...ANYTHING.'
 
     def capacity(self):
         self.capacity = 10
 
 
-joe = Character("Joe", "A generic middle aged man.", 10, None, None, 100, [])
+joe = Character("Joe", "A generic middle aged man.", 10, [])
 
 directions = ['north', 'south', 'west', 'east', 'northwest', 'northeast', 'southwest', 'southeast', 'up', 'down']
 short_direction = ['n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'u', 'd']
@@ -264,7 +258,8 @@ f_gate = Room('Front Gate', None, None, None, 'b_fence', None, None, None, None,
 b_fence = Room('Broken Fence', None, None, 'f_gate', None, None, None, None, None, None, None,
                'The fence is loose. Maybe you can break in.', 'Fence', None, None)
 garden = Room('Garden', 's_house', 'b_fence', None, None, None, 'shed', None, None, None,
-              None, 'There is a path leading Northeast somewhere and there is a broken fence south of here.',
+              None, 'There is a path leading Northeast somewhere and there is a broken fence south of here. '
+                    'There seems to be a house North of here',
               'Flowerbed', None, None)
 s_house = Room('South of House', None, 'garden', 'w_house', 'e_house', None, None, None, None,
                None, None, 'There is a window that is partly open. There seems to be something shining inside')
@@ -315,12 +310,19 @@ while True:
     elif command == 'test this':
         webbrowser.open_new("https://www.youtube.com/watch?v=ru0K8uYEZWw")
     elif command == 'unlock room' and current_node == up_stairs:
-        joe.inventory = []
         if Key in joe.inventory:
             print("You opened the door.")
             up_stairs.west = 'jt_room'
         else:
             print("You do not have the key.")
+    elif command == '?':
+        print('To move you just type in:\n'
+              'the direction you want to go in.\n'
+              'for example: typing in n or north will take you north'
+              'type this to go to next page: page 2')
+    elif command == 'page 2':
+        print('To pick up items type in:'
+              'pick up [name of item]')
 
     elif command == 'open window' and current_node == s_house:
         s_house.north = 'l_room'
