@@ -334,7 +334,7 @@ while True:
     elif 'pickup' in command:
         pick_up = command[5:]
 #  Attack
-    elif command == 'attack security guard' and current_node == f_gate:
+    elif command == 'attack guard' and current_node == f_gate:
         print('You tried to attack the guard but he grabs you and starts beating you. \n'
               'YOU HAVE BEEN BEATEN TO DEATH')
         quit(0)
