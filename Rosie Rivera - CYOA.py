@@ -1,6 +1,5 @@
 import random
 import webbrowser
-import time
 
 # import statements
 # class definitions
@@ -161,6 +160,13 @@ class Mug(Helper):
             print('You picked up the mug.')
 
 
+class Club(Helper):
+    def __init__(self, name, action, use):
+        super(Club, self).__init__(name, action, use)
+
+    def attack(self):
+        print('You have gotten beat to death.')
+
 class Phone(Helper):
     def __init__(self, name, action, use):
         super(Phone, self).__init__(name, action, use)
@@ -204,6 +210,7 @@ class Room(object):
         current_node = globals()[getattr(self, direction)]
 
 
+club = Club('Club', None, None)
 cupboard = Cupboard('Cupboard', None, 'open')
 fridge = Fridge('Fridge', None, 'open')
 box = Box('Box', None, 'open')
@@ -235,28 +242,33 @@ class Character(object):
         self.capacity = 10
 
 
-joe = Character("Joe", "A generic middle aged man.", 10, [])
+guard = Character('Guard', 'He is a mean man that will not let you pass from the front gate.', None,
+                  'f_gate', [Club], None)
+joe = Character("Joe", "A generic middle aged man.", 10, None, [], None)
 
 directions = ['north', 'south', 'west', 'east', 'northwest', 'northeast', 'southwest', 'southeast', 'up', 'down']
 short_direction = ['n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'u', 'd']
 
 f_gate = Room('Front Gate', None, None, None, 'b_fence', None, None, None, None, None, None,
-              'The Gate is locked. You must look for another way.', None, None, None)
-b_fence = Room('Broken Fence', None, None, 'f_gate', None, None, None, None, None, None, None,
-               'The fence is loose. Maybe you can break in.', 'Fence', None, None)
+              'The Gate is locked and guarded by a mean looking guard. You could look for another way '
+              'or attack the guard.', None, None, None)
+b_fence = Room('Loose Fence', None, None, 'f_gate', None, None, None, None, None, None, None,
+               'The fence is loose. Maybe you can break in.', None, None, None)
 garden = Room('Garden', 's_house', 'b_fence', None, None, None, 'shed', None, None, None,
               None, 'There is a path leading Northeast somewhere and there is a broken fence south of here. '
                     'There seems to be a house North of here',
-              'Flowerbed', None, None)
+              None, None, None)
+t_room = Room('Bathroom', None, 'up_stairs', None, None, None, None, None, None, None, None,
+              'This is a really nice bathroom, but there are used Q-tips here...')
 s_house = Room('South of House', None, 'garden', 'w_house', 'e_house', None, None, None, None,
-               None, None, 'There is a window that is partly open. There seems to be something shining inside')
+               None, None, 'There is a window that is partly open. There seems to be something shining inside', 'qtip')
 l_room = Room('Living Room', None, 's_house', None, 'k_room', None, None, None, None, 'up_stairs',
               'd_stairs', 'It seems to be a regular lving room, and there is a mug that is just sitting there.'
                           'There is a staircase that leads upstairs and downstairs.', 'mug', None, None)
 k_room = Room('Kitchen', None, None, 'l_room', None, None, None, None, None, None, None,
               'There is a fridge, an island, and cupboards.There is a knife on a cutting board, a sink,'
               'a coffee machine, coffee grounds, and a mug', 'coffee machine', 'coffee grounds', 'sink')
-up_stairs = Room('Up Stairs', None, None, None, 'g_room', None, None, None, None,
+up_stairs = Room('Up Stairs', 't_room', None, None, 'g_room', None, None, None, None,
                  None, 'l_room', 'There is a room WEST \n of here and a room EAST of here. There is a mirror and a vase'
                                  ' that has some flowers')
 theater = Room('Theater', None, None, 'd_stairs', None, None, None, None, None, None, None,
@@ -321,6 +333,11 @@ while True:
         print("SMASH!!!!!")
     elif 'pickup' in command:
         pick_up = command[5:]
+#  Attack
+    elif command == 'attack security guard' and current_node == f_gate:
+        print('You tried to attack the guard but he grabs you and starts beating you. \n'
+              'YOU HAVE BEEN BEATEN TO DEATH')
+        quit(0)
 #  Pickup
         found = False
         for item in joe.location.items:
