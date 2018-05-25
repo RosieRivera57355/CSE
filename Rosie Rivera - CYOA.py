@@ -1,5 +1,6 @@
 import random
 import webbrowser
+import time
 
 # import statements
 # class definitions
@@ -171,26 +172,12 @@ class Phone(Helper):
         print('The phone has turned on.')
 
 
-class Sink(Furniture):
+class Qtip(Helper):
     def __init__(self, name, action, use):
-        super(Sink, self).__init__(name, action, use)
-
-    def run(self):
-        print('The sink is now running.')
-
-    def turnoff(self):
-        print('The sink is not running.')
-
-
-class FryingPan(Helper):
-    def __init__(self, name, action, use):
-        super(FryingPan, self).__init__(name, action, use)
+        super(Qtip, self).__init__(name, action, use)
 
     def pickup(self):
-        print('You picked up a frying pan.')
-
-    def fill(self):
-        print('You have filled the coffee machine up with coffee grounds.')
+        print('You picked up a used Q-Tip.')
 
 
 class Room(object):
@@ -217,27 +204,27 @@ class Room(object):
         current_node = globals()[getattr(self, direction)]
 
 
-window = Window('Window', None, 'open')
-fence = Fence('Fence', None, 'open')
 cupboard = Cupboard('Cupboard', None, 'open')
 fridge = Fridge('Fridge', None, 'open')
 box = Box('Box', None, 'open')
 flowerbed = Flowerbed('Flowerbed', None, 'search')
-coffeegrounds = CoffeeGrounds('Coffee grounds', 'pickup', 'pour grounds')
-knife = Knife('Knife', 'pickup knife', 'threaten')
-bp = Bp('Backpack', 'pickup knife', 'equip backpack')
-key = Key('Key', 'pickup knife', 'use')
+knife = Knife('Knife', 'pickup', 'threaten')
+bp = Bp('Backpack', 'pickup', 'equip backpack')
+key = Key('Key', 'pickup', 'use')
 plushdog = PlushDog('Plush Dog', None, None)
-bone = Bone('Bone', 'pickup knife', 'give')
+bone = Bone('Bone', 'pickup', 'give')
 phone = Phone('Phone', 'pickup', 'take a picture')
+qtip = Qtip('Q-Tip', 'pick_up', None)
 
 
 class Character(object):
-    def __init__(self, name, description, capacity, inventory):
+    def __init__(self, name, description, capacity, location, inventory, pickup):
         self.name = name
         self.description = description
         self.capacity = capacity
+        self.location = location
         self.inventory = inventory
+        self.pickup = pickup
 
     def description(self):
         self.name = 'Joe'
@@ -315,20 +302,32 @@ while True:
             up_stairs.west = 'jt_room'
         else:
             print("You do not have the key.")
+#  Help
     elif command == '?':
         print('To move you just type in:\n'
               'the direction you want to go in.\n'
-              'for example: typing in n or north will take you north'
+              'for example: typing in n or north will take you north \n'
+              ''
               'type this to go to next page: page 2')
     elif command == 'page 2':
         print('To pick up items type in:'
               'pick up [name of item]')
-
+#
     elif command == 'open window' and current_node == s_house:
         s_house.north = 'l_room'
         print('WOOOOOOSH!')
     elif command == 'break fence' and current_node == b_fence:
         b_fence.north = 'garden'
         print("SMASH!!!!!")
+    elif 'pickup' in command:
+        pick_up = command[5:]
+#  Pickup
+        found = False
+        for item in joe.location.items:
+            if pickup_name == item.name.lower():
+                if joe.pickup(item):
+                    found = item
+        if found is False:
+            print('Invalid Item')
     else:
         print("Command not Found")
